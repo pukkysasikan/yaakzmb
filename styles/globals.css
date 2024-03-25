@@ -52,9 +52,9 @@ a {
 .input {
   background-color: #f1f1f1;
   border-radius: 10px;
-  width: 65%;
+  width: 72%;
   height: 40px;
-  margin-right: 10px;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -221,7 +221,7 @@ a {
   border-radius: 20px 20px 0px 0px;
   margin-top: 20px;
   height: 765px;
-  width: 430px;
+  width: 100%;
   display: grid;
   justify-content: center;
   align-content: flex-start;
@@ -241,13 +241,14 @@ a {
 .box-item {
   margin-top: 20px;
   background-color: #fff;
-  width: 395px;
+  width: 340px;
   height: 105px;
   border-radius: 20px;
   display: flex;
   align-self: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  padding: 0px 10px 0px 10px;
 }
 
 .box-item-preorder {
@@ -266,7 +267,7 @@ a {
   margin-top: 20px;
   padding-top: 10px;
   background-color: #fff;
-  width: 395px;
+  width: 360px;
   height: 142px;
   border-radius: 20px;
   display: flex;
@@ -372,6 +373,7 @@ a {
   padding: none;
   border: #d9d9d9 1px solid;
   z-index: 999;
+  background-color: #fff;
 }
 
 .css-uwi3e2-MuiTabs-indicator {
@@ -393,7 +395,7 @@ a {
 }
 
 .box-stock {
-  width: 379px;
+  width: 90%;
   height: 129px;
   background-color: #fff;
   border-radius: 20px;
@@ -412,15 +414,15 @@ a {
 
 .bg-regis {
   background-color: #b6b6b6;
-  width: 430px;
-  height: 150px;
+  width: 100%;
+  height: 100px;
 }
 
 .regis-container {
   margin-top: -30px;
   background-color: #fff;
-  width: 430px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -438,7 +440,7 @@ a {
 
 .bg-select-address {
   background-color: #f1f1f1;
-  width: 179px;
+  width: 100%;
   height: 37px;
   border-radius: 10px;
 }
@@ -573,8 +575,8 @@ a {
 }
 
 .img-detail-reward {
-  width: 385px;
-  height: 348px;
+  width: 100%;
+  height: 300px;
   border-radius: 20px;
   margin-bottom: 10px;
   background-color: #f1f1f1;
@@ -582,7 +584,7 @@ a {
 
 .box-btn-reward {
   background-color: #f1f1f1;
-  width: 410px;
+  width: 90%;
   height: 107px;
   border-radius: 20px;
   bottom: 0;

@@ -58,7 +58,7 @@ export default function Profile() {
       <div className="toolbar" />
       <div style={{ display: "grid", justifyContent: "center" }}>
         <Avatar
-          style={{ width: 80, height: 80 }}
+          style={{ width: 80, height: 80, marginLeft: 10 }}
           alt="Pukky"
           src="/static/images/avatar/1.jpg"
         />

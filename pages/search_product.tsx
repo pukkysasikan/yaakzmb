@@ -72,7 +72,7 @@ export default function SearchProduct() {
           <div className="img-item">
             <Typography>รูปภาพ</Typography>
           </div>
-          <div style={{ width: 270, marginTop: -5 }}>
+          <div style={{ width: 230, marginTop: -5 }}>
             <Typography style={{ height: 55 }}>
               ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
             </Typography>
@@ -91,56 +91,12 @@ export default function SearchProduct() {
             </div>
           </div>
         </div>
+
         <div className="box-item">
           <div className="img-item">
             <Typography>รูปภาพ</Typography>
           </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <Button
-                onClick={(_) => setOpenSuccess(true)}
-                className="btn-add-item-search"
-                variant="contained"
-                color="secondary"
-              >
-                <AddRounded style={{ width: 16, height: 16 }} />
-                <Typography style={{ fontSize: "14px" }}>
-                  เพิ่มในคลัง
-                </Typography>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <Button
-                className="btn-add-item-search-success"
-                variant="contained"
-                color="secondary"
-              >
-                <CheckRounded style={{ width: 16, height: 16 }} />
-                <Typography style={{ fontSize: "14px" }}>
-                  เพิ่มในคลังแล้ว
-                </Typography>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
+          <div style={{ width: 230, marginTop: -5 }}>
             <Typography style={{ height: 55 }}>
               ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
             </Typography>

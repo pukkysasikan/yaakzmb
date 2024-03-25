@@ -36,10 +36,10 @@ export default function Register() {
       <div className="bg-regis" />
       <div className="regis-container">
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Image src={mypic} width={200} height={200} alt="" />
+          <Image src={mypic} width={180} height={180} alt="" />
         </div>
         <Typography style={{ textAlign: "center" }}>YAAKZ MEMBER</Typography>
-        <Typography style={{ textAlign: "center", marginTop: 20 }}>
+        <Typography style={{ textAlign: "center", marginTop: 10 }}>
           ลงทะเบียน
         </Typography>
 
@@ -48,6 +48,7 @@ export default function Register() {
             style={{
               display: "flex",
               justifyContent: "space-between",
+              width: "100%",
             }}
           >
             <Typography className="">ชื่อ</Typography>
@@ -95,62 +96,54 @@ export default function Register() {
           </div>
           <Typography>ที่อยู่</Typography>
           <div className="select-address-container">
-            <div>
-              <div style={{ marginTop: 10 }}>
-                <Typography>จังหวัด</Typography>
-                <FormControl sx={{ height: 40, width: 200 }}>
-                  <Select
-                    id="demo-multiple-chip-label"
-                    displayEmpty
-                    input={<SelectInputBase id="select-multiple-chip" />}
-                    className="bg-select-address"
-                  ></Select>
-                </FormControl>
-              </div>
+            <div style={{ marginTop: 10 }}>
+              <Typography>จังหวัด</Typography>
+              <FormControl sx={{ height: 40, width: 160 }}>
+                <Select
+                  id="demo-multiple-chip-label"
+                  displayEmpty
+                  input={<SelectInputBase id="select-multiple-chip" />}
+                  className="bg-select-address"
+                ></Select>
+              </FormControl>
             </div>
 
-            <div>
-              <div style={{ marginTop: 10 }}>
-                <Typography>อำเภอ</Typography>
-                <FormControl sx={{ height: 40, width: 200 }}>
-                  <Select
-                    id="demo-multiple-chip-label"
-                    displayEmpty
-                    input={<SelectInputBase id="select-multiple-chip" />}
-                    className="bg-select-address"
-                  ></Select>
-                </FormControl>
-              </div>
+            <div style={{ marginTop: 10 }}>
+              <Typography>อำเภอ</Typography>
+              <FormControl sx={{ height: 40, width: 160 }}>
+                <Select
+                  id="demo-multiple-chip-label"
+                  displayEmpty
+                  input={<SelectInputBase id="select-multiple-chip" />}
+                  className="bg-select-address"
+                ></Select>
+              </FormControl>
             </div>
           </div>
 
           <div className="select-address-container">
-            <div>
-              <div style={{ marginTop: 10 }}>
-                <Typography>ตำบล</Typography>
-                <FormControl sx={{ height: 40, width: 200 }}>
-                  <Select
-                    id="demo-multiple-chip-label"
-                    displayEmpty
-                    input={<SelectInputBase id="select-multiple-chip" />}
-                    className="bg-select-address"
-                  ></Select>
-                </FormControl>
-              </div>
+            <div style={{ marginTop: 10 }}>
+              <Typography>ตำบล</Typography>
+              <FormControl sx={{ height: 40, width: 160 }}>
+                <Select
+                  id="demo-multiple-chip-label"
+                  displayEmpty
+                  input={<SelectInputBase id="select-multiple-chip" />}
+                  className="bg-select-address"
+                ></Select>
+              </FormControl>
             </div>
 
-            <div>
-              <div style={{ marginTop: 10 }}>
-                <Typography>รหัสไปรษณีย์</Typography>
-                <FormControl sx={{ height: 40, width: 200 }}>
-                  <Select
-                    id="demo-multiple-chip-label"
-                    displayEmpty
-                    input={<SelectInputBase id="select-multiple-chip" />}
-                    className="bg-select-address"
-                  ></Select>
-                </FormControl>
-              </div>
+            <div style={{ marginTop: 10 }}>
+              <Typography>รหัสไปรษณีย์</Typography>
+              <FormControl sx={{ height: 40, width: 160 }}>
+                <Select
+                  id="demo-multiple-chip-label"
+                  displayEmpty
+                  input={<SelectInputBase id="select-multiple-chip" />}
+                  className="bg-select-address"
+                ></Select>
+              </FormControl>
             </div>
           </div>
           <div style={{ marginTop: 10, marginBottom: 20 }}>

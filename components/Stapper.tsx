@@ -79,9 +79,9 @@ const steps = ["รอดำเนินการ", "รับเข้าสา
 
 export default function CustomizedSteppers(props2: StepProps) {
   return (
-    <Stack style={{ marginLeft: -15 }}>
+    <Stack style={{ marginLeft: -25 }}>
       <Stepper
-        sx={{ width: 300, paddingTop: 0.5 }}
+        sx={{ width: 270, paddingTop: 0.5 }}
         alternativeLabel
         activeStep={props2.step} // ตั้งค่า activeStep เป็น 2 เพื่อให้ขั้นตอน "รับสินค้าแล้ว" เป็น active
         connector={<QontoConnector />}
