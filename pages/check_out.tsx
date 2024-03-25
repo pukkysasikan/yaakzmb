@@ -10,6 +10,7 @@ import {
   CheckRounded,
   DeleteOutlineRounded,
   ErrorOutlineRounded,
+  ModeEditOutlineRounded,
   MopedRounded,
   RemoveCircleOutlineRounded,
 } from "@mui/icons-material";
@@ -17,12 +18,14 @@ import {
 import TapsProps from "@/components/Tabs";
 import DialogProps from "@/components/dialog/DialogSuccess";
 import router from "next/router";
+import DialogEditUserProps from "@/components/dialog/DialogEditUser";
 
 export default function Cart() {
   const [openSuccess, setOpenSuccess] = React.useState(false);
-
+  const [openEditUser, setOpenEditUser] = React.useState(false);
   const handleClose = () => {
     setOpenSuccess(false);
+    setOpenEditUser(false);
   };
 
   return (
@@ -45,7 +48,18 @@ export default function Cart() {
       <div className="box-search-item2">
         <div className="box-chkout-address">
           <div style={{ padding: 15 }}>
-            <Typography>ที่อยู่ในการจัดส่ง</Typography>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: 2,
+              }}
+            >
+              <Typography>ที่อยู่ในการจัดส่ง</Typography>
+              <IconButton onClick={() => setOpenEditUser(true)}>
+                <ModeEditOutlineRounded />
+              </IconButton>
+            </div>
             <Typography>ชื่อ : Pukky</Typography>
             <Typography>เบอร์โทรศัพท์ : 06138908xx</Typography>
             <Typography>
@@ -187,6 +201,7 @@ export default function Cart() {
           />
         }
       />
+      <DialogEditUserProps open={openEditUser} onClose={handleClose} />
 
       <TapsProps />
     </>

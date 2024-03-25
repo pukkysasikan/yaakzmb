@@ -1,9 +1,10 @@
 import ItemSlider from "@/components/ItemSlider";
 import TapsProps from "@/components/Tabs";
 import ImageSlider from "@/components/ImageSlider";
-import { MenuBookRounded } from "@mui/icons-material";
-import { Slider, Typography } from "@mui/material";
+import { ArrowBackIosNewRounded, MenuBookRounded } from "@mui/icons-material";
+import { IconButton, Slider, Typography } from "@mui/material";
 import Head from "next/head";
+import router from "next/router";
 
 export default function Stock() {
   const slides = [
@@ -30,7 +31,12 @@ export default function Stock() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="toolbar">
-        <Typography style={{ fontSize: 24 }}>คลังของฉัน</Typography>
+        <IconButton onClick={() => router.back()}>
+          <ArrowBackIosNewRounded />
+        </IconButton>
+        <Typography style={{ fontSize: 24, marginRight: 20 }}>
+          คลังของฉัน
+        </Typography>
       </div>
       <div style={{ height: 805 }}>
         <div style={{ height: 300 }}>

@@ -32,7 +32,10 @@ export default function ItemDetailRewards() {
       </div>
       <div style={{ display: "grid", justifyContent: "center" }}>
         <div className="img-detail-reward"></div>
-        <Typography>กระเป๋า</Typography>
+        <Typography style={{ fontSize: 20 }}>ถุงผ้า รุ่นโกลว์</Typography>
+        <Typography>
+          ถุงผ้า รุ่นโกลว์ ขนาด 40 X 0.3 X 45 ซม. - สีเบจ/ดำ
+        </Typography>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="box-btn-reward">

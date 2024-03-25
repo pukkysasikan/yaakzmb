@@ -1,9 +1,11 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 
 import TapsProps from "@/components/Tabs";
+import { ArrowBackIosNewRounded } from "@mui/icons-material";
+import router from "next/router";
 
 export default function StockDetail() {
   return (
@@ -15,7 +17,12 @@ export default function StockDetail() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="toolbar">
-        <Typography style={{ fontSize: "24px" }}>คลังของฉัน</Typography>
+        <IconButton onClick={() => router.back()}>
+          <ArrowBackIosNewRounded />
+        </IconButton>
+        <Typography style={{ fontSize: "24px", marginRight: 20 }}>
+          คลังของฉัน
+        </Typography>
       </div>
 
       <Typography

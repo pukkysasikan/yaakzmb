@@ -2,12 +2,16 @@ import Head from "next/head";
 import * as React from "react";
 
 import { Button, IconButton, Typography } from "@mui/material";
-import { AddRounded, ArrowBackIosNewRounded } from "@mui/icons-material";
+import {
+  AddRounded,
+  ArrowBackIosNewRounded,
+  CheckRounded,
+} from "@mui/icons-material";
 
 import TapsProps from "@/components/Tabs";
 import router from "next/router";
 
-export default function ProductDetail() {
+export default function ProductDetailAdded() {
   return (
     <>
       <Head>
@@ -37,18 +41,14 @@ export default function ProductDetail() {
           </Typography>
           <div className="text-product-detail-container">
             <div className="text-product-detail-left">
-              <Typography>เล่มที่&nbsp;&nbsp;:</Typography>
-              <Typography>ราคาปก&nbsp;&nbsp;:</Typography>
-              <Typography>Barcode&nbsp;&nbsp;:</Typography>
+              <Typography>ราคา&nbsp;&nbsp;:</Typography>
+              <Typography>วันที่วางขาย&nbsp;&nbsp;:</Typography>
               <Typography>สำนักพิมพ์&nbsp;&nbsp;:</Typography>
-              <Typography>วันที่วางจำหน่าย&nbsp;&nbsp;:</Typography>
             </div>
             <div>
-              <Typography>90</Typography>
               <Typography>90 บาท</Typography>
-              <Typography>9786165971171</Typography>
-              <Typography>No Information</Typography>
               <Typography>12/12/66</Typography>
+              <Typography>No Information</Typography>
             </div>
           </div>
         </div>
@@ -58,8 +58,8 @@ export default function ProductDetail() {
             variant="outlined"
             color="info"
           >
-            <AddRounded />
-            เพิ่มในคลัง
+            <CheckRounded />
+            เพิ่มในคลังแล้ว
           </Button>
         </div>
       </div>

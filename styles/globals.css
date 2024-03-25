@@ -360,7 +360,7 @@ a {
 }
 
 .text-product-detail-left {
-  width: 100px;
+  width: 130px;
 }
 
 .tabs-container {
@@ -576,6 +576,7 @@ a {
   width: 385px;
   height: 348px;
   border-radius: 20px;
+  margin-bottom: 10px;
   background-color: #f1f1f1;
 }
 

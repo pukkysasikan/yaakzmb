@@ -23,6 +23,7 @@ import TapsProps from "@/components/Tabs";
 import { SelectInputBase } from "@/services/StyleUtils";
 import DialogProps from "@/components/dialog/DialogSuccess";
 import DialogEditUserProps from "@/components/dialog/DialogEditUser";
+import ItemRewarsSliders from "@/components/ItemRewarsSliders";
 
 export default function Profile() {
   const slides = [
@@ -133,7 +134,7 @@ export default function Profile() {
             </Typography>
           </div>
           <div>
-            <ImageSlider slides={slides} />
+            <ItemRewarsSliders slides={slides} />
           </div>
         </div>
       </div>
