@@ -54,11 +54,7 @@ export default function ProductDetail() {
             </div>
           </div>
           <div className="tabs-container">
-            <Button
-              style={{ width: "90%", borderRadius: 10 }}
-              variant="outlined"
-              color="info"
-            >
+            <Button className="btn-regis">
               <AddRounded />
               เพิ่มในคลัง
             </Button>

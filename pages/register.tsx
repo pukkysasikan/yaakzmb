@@ -159,7 +159,6 @@ export default function Register() {
                 />
               </div>
             </div>
-
             <a href="home">
               <div
                 style={{

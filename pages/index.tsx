@@ -44,9 +44,9 @@ export default function Index() {
               marginTop: 20,
             }}
           >
-            <Typography>เบอร์โทรศัพท์</Typography>
             <div className="input">
               <InputBase
+                placeholder="เบอร์โทรศัพท์"
                 onClick={() => setOpenDialog(true)}
                 sx={{ marginLeft: 6, marginTop: 0.5 }}
                 inputProps={{ "aria-label": "search" }}

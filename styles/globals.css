@@ -75,7 +75,8 @@ a {
   border-radius: 10px;
   width: 72%;
   height: 40px;
-
+  display: flex;
+  justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -481,17 +482,18 @@ a {
 }
 
 .btn-regis {
-  width: 100%;
+  width: 60%;
   margin-top: 20px;
   border-radius: 10px;
-
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: #f1f1f1;
+  color: #7b7878;
 }
 
 .btn-login {
-  width: 90%;
+  width: 60%;
   border-radius: 10px;
+  background-color: #f1f1f1;
+  color: #7b7878;
 }
 
 .box-order-list {

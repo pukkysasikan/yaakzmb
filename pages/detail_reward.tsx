@@ -82,7 +82,7 @@ export default function ItemDetailRewards() {
                 style={{
                   width: "90%",
                   borderRadius: 10,
-                  backgroundColor: "#D9D9D9",
+                  backgroundColor: "#F1F1F1",
                   color: "#7B7878",
                 }}
                 variant="contained"

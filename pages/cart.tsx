@@ -181,21 +181,19 @@ export default function Cart() {
               </div>
             </div>
           </div>
-
-          <div
-            style={{
-              justifyContent: "center",
-              display: "flex",
-              marginTop: 20,
-              bottom: 0,
-            }}
-          >
-            <a href="/check_out">
-              <Button className="btn-regis" variant="contained">
+          <a href="check_out">
+            <div
+              style={{
+                justifyContent: "center",
+                display: "flex",
+                marginTop: 20,
+              }}
+            >
+              <Button className="btn-login" variant="contained">
                 ดำเนินการต่อ
               </Button>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
 
         <TapsProps />

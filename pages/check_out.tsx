@@ -167,14 +167,22 @@ export default function Cart() {
               </div>
             </div>
           </div>
-          <a href="/order_list">
-            <Button
-              className="btn-regis"
-              variant="contained"
-              onClick={() => setOpenSuccess(true)}
+          <a href="order_list">
+            <div
+              style={{
+                justifyContent: "center",
+                display: "flex",
+                marginTop: 20,
+              }}
             >
-              ดำเนินการต่อ
-            </Button>
+              <Button
+                className="btn-login"
+                variant="contained"
+                onClick={() => setOpenSuccess(true)}
+              >
+                ดำเนินการต่อ
+              </Button>
+            </div>
           </a>
         </div>
         <DialogProps
