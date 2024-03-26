@@ -1,18 +1,12 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import {
-  AddCircleOutlineRounded,
-  AddRounded,
   ArrowBackIosNewRounded,
   CheckCircleOutlined,
-  CheckRounded,
-  DeleteOutlineRounded,
-  ErrorOutlineRounded,
   ModeEditOutlineRounded,
   MopedRounded,
-  RemoveCircleOutlineRounded,
 } from "@mui/icons-material";
 
 import TapsProps from "@/components/Tabs";
@@ -36,18 +30,18 @@ export default function Cart() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="toolbar">
-        <IconButton onClick={() => router.back()}>
-          <ArrowBackIosNewRounded />
-        </IconButton>
-        <Typography style={{ fontSize: "24px", marginRight: 50 }}>
-          สั่งซื้อ
-        </Typography>
-      </div>
+      <Box className="container">
+        <div className="toolbar">
+          <IconButton onClick={() => router.back()}>
+            <ArrowBackIosNewRounded />
+          </IconButton>
+          <Typography style={{ fontSize: "24px", marginRight: 50 }}>
+            สั่งซื้อ
+          </Typography>
+        </div>
 
-      <div className="box-search-item2">
-        <div className="box-chkout-address">
-          <div style={{ padding: 15 }}>
+        <div className="box-chk-item">
+          <div className="box-chkout-address" style={{ padding: 15 }}>
             <div
               style={{
                 display: "flex",
@@ -62,34 +56,21 @@ export default function Cart() {
             </div>
             <Typography>ชื่อ : Pukky</Typography>
             <Typography>เบอร์โทรศัพท์ : 06138908xx</Typography>
-            <Typography>
+            <Typography style={{ width: 300 }}>
               ที่อยู่ : 681/6 เลอชาโต ซ.ลาดพร้าว48 แยก12 แขวงสามเสนนอก
               เขตห้วยขวาง 10310
             </Typography>
           </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+
+          <div className="box-item">
+            <div className="img-item">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: -5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div>
                 <div
                   style={{
                     display: "flex",
@@ -97,34 +78,34 @@ export default function Cart() {
                     alignItems: "center",
                   }}
                 >
-                  <Typography>x1</Typography>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <MopedRounded />
+                    <Typography style={{ fontSize: 14 }}>
+                      พร้อมจัดส่ง 19/12/24
+                    </Typography>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography>x1</Typography>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+          <div className="box-item">
+            <div className="img-item">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: -5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div>
                 <div
                   style={{
                     display: "flex",
@@ -132,34 +113,34 @@ export default function Cart() {
                     alignItems: "center",
                   }}
                 >
-                  <Typography>x1</Typography>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <MopedRounded />
+                    <Typography style={{ fontSize: 14 }}>
+                      พร้อมจัดส่ง 19/12/24
+                    </Typography>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography>x1</Typography>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+          <div className="box-item">
+            <div className="img-item">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: -5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div>
                 <div
                   style={{
                     display: "flex",
@@ -167,20 +148,26 @@ export default function Cart() {
                     alignItems: "center",
                   }}
                 >
-                  <Typography>x1</Typography>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <MopedRounded />
+                    <Typography style={{ fontSize: 14 }}>
+                      พร้อมจัดส่ง 19/12/24
+                    </Typography>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography>x1</Typography>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <a href="/order_list">
-          <div
-            style={{
-              justifyContent: "center",
-              display: "flex",
-              marginTop: 20,
-            }}
-          >
+          <a href="/order_list">
             <Button
               className="btn-regis"
               variant="contained"
@@ -188,22 +175,22 @@ export default function Cart() {
             >
               ดำเนินการต่อ
             </Button>
-          </div>
-        </a>
-      </div>
-      <DialogProps
-        open={openSuccess}
-        onClose={handleClose}
-        text="สั่งซื้อสำเร็จ"
-        icon={
-          <CheckCircleOutlined
-            style={{ width: 100, height: 100, color: "#60D36C" }}
-          />
-        }
-      />
-      <DialogEditUserProps open={openEditUser} onClose={handleClose} />
+          </a>
+        </div>
+        <DialogProps
+          open={openSuccess}
+          onClose={handleClose}
+          text="สั่งซื้อสำเร็จ"
+          icon={
+            <CheckCircleOutlined
+              style={{ width: 100, height: 100, color: "#60D36C" }}
+            />
+          }
+        />
+        <DialogEditUserProps open={openEditUser} onClose={handleClose} />
 
-      <TapsProps />
+        <TapsProps />
+      </Box>
     </>
   );
 }

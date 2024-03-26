@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import {
   AddRounded,
   ArrowBackIosNewRounded,
@@ -25,81 +25,83 @@ export default function PreOrder() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="toolbar-cart">
-        <IconButton onClick={() => router.back()}>
-          <ArrowBackIosNewRounded />
-        </IconButton>
-        <Typography style={{ fontSize: 24 }}>Pre Order</Typography>
-        <a href="/cart">
-          <div className="box-cart">
-            <ShoppingCartOutlined />
-          </div>
-        </a>
-      </div>
+      <Box className="container">
+        <div className="toolbar-cart">
+          <IconButton onClick={() => router.back()}>
+            <ArrowBackIosNewRounded />
+          </IconButton>
+          <Typography style={{ fontSize: 24 }}>Pre Order</Typography>
+          <a href="/cart">
+            <div className="box-cart">
+              <ShoppingCartOutlined />
+            </div>
+          </a>
+        </div>
 
-      <div className="box-search-item-preorder">
-        <div className="box-item-preorder">
-          <div className="img-item-preorder">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, margin: 5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
+        <div className="box-search-item-preorder">
+          <div className="box-item-preorder">
+            <div className="img-item-preorder">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, margin: 5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
 
-            <div>
-              <div style={{ display: "flex", justifyContent: "left" }}>
-                <MopedRounded />
-                <Typography style={{ fontSize: 14 }}>
-                  พร้อมจัดส่ง 19/12/24
-                </Typography>
+              <div>
+                <div style={{ display: "flex", justifyContent: "left" }}>
+                  <MopedRounded />
+                  <Typography style={{ fontSize: 14 }}>
+                    พร้อมจัดส่ง 19/12/24
+                  </Typography>
+                </div>
+                <Button
+                  onClick={(_) => SetOpenSuccess(true)}
+                  className="btn-add-item-cart"
+                  variant="contained"
+                  color="secondary"
+                >
+                  <AddRounded style={{ width: 16, height: 16 }} />
+                  <Typography style={{ fontSize: "14px" }}>
+                    เพิ่มลงตะกร้า
+                  </Typography>
+                </Button>
               </div>
-              <Button
-                onClick={(_) => SetOpenSuccess(true)}
-                className="btn-add-item-cart"
-                variant="contained"
-                color="secondary"
-              >
-                <AddRounded style={{ width: 16, height: 16 }} />
-                <Typography style={{ fontSize: "14px" }}>
-                  เพิ่มลงตะกร้า
-                </Typography>
-              </Button>
+            </div>
+          </div>
+          <div className="box-item-preorder">
+            <div className="img-item-preorder">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: 5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div>
+                <div style={{ display: "flex", justifyContent: "left" }}>
+                  <MopedRounded />
+                  <Typography style={{ fontSize: 14 }}>
+                    พร้อมจัดส่ง 19/12/24
+                  </Typography>
+                </div>
+                <Button
+                  onClick={(_) => SetOpenSuccess(true)}
+                  className="btn-add-item-cart"
+                  variant="contained"
+                  color="secondary"
+                >
+                  <AddRounded style={{ width: 16, height: 16 }} />
+                  <Typography style={{ fontSize: "14px" }}>
+                    เพิ่มลงตะกร้า
+                  </Typography>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-        <div className="box-item-preorder">
-          <div className="img-item-preorder">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: 5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <div style={{ display: "flex", justifyContent: "left" }}>
-                <MopedRounded />
-                <Typography style={{ fontSize: 14 }}>
-                  พร้อมจัดส่ง 19/12/24
-                </Typography>
-              </div>
-              <Button
-                onClick={(_) => SetOpenSuccess(true)}
-                className="btn-add-item-cart"
-                variant="contained"
-                color="secondary"
-              >
-                <AddRounded style={{ width: 16, height: 16 }} />
-                <Typography style={{ fontSize: "14px" }}>
-                  เพิ่มลงตะกร้า
-                </Typography>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <TapsProps />
+        <TapsProps />
+      </Box>
     </>
   );
 }

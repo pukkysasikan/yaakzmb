@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import {
   AddCircleOutlineRounded,
   AddRounded,
@@ -26,200 +26,180 @@ export default function Cart() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="toolbar">
-        <IconButton onClick={() => router.back()}>
-          <ArrowBackIosNewRounded />
-        </IconButton>
-        <Typography style={{ fontSize: 24, marginRight: 50 }}>
-          ตะกร้า
-        </Typography>
-      </div>
+      <Box className="container">
+        <div className="toolbar">
+          <IconButton onClick={() => router.back()}>
+            <ArrowBackIosNewRounded />
+          </IconButton>
+          <Typography style={{ fontSize: 24, marginRight: 50 }}>
+            ตะกร้า
+          </Typography>
+        </div>
 
-      <div className="box-search-item2">
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
+        <div className="box-search-item2">
+          <div className="box-item-preorder">
+            <div className="img-item-preorder">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, margin: 5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div style={{ display: "flex", justifyContent: "left" }}>
+                <MopedRounded />
+                <Typography style={{ fontSize: 14 }}>
+                  พร้อมจัดส่ง 19/12/24
+                </Typography>
+              </div>
+
               <div
                 style={{
+                  marginTop: 10,
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent: "right",
                   alignItems: "center",
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <DeleteOutlineRounded />
+                </IconButton>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <RemoveCircleOutlineRounded />
+                </IconButton>
                 <div
                   style={{
+                    backgroundColor: "#D9D9D9",
+                    width: 25,
+                    height: 25,
+                    borderRadius: 5,
                     display: "flex",
-                    justifyContent: "space-between",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <DeleteOutlineRounded />
-                  </IconButton>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <RemoveCircleOutlineRounded />
-                  </IconButton>
-                  <div
-                    style={{
-                      backgroundColor: "#D9D9D9",
-                      width: 25,
-                      height: 25,
-                      borderRadius: 5,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Typography style={{ textAlign: "center" }}>1</Typography>
-                  </div>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <AddCircleOutlineRounded />
-                  </IconButton>
+                  <Typography style={{ textAlign: "center" }}>1</Typography>
                 </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <AddCircleOutlineRounded />
+                </IconButton>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
+          <div className="box-item-preorder">
+            <div className="img-item-preorder">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, margin: 5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div style={{ display: "flex", justifyContent: "left" }}>
+                <MopedRounded />
+                <Typography style={{ fontSize: 14 }}>
+                  พร้อมจัดส่ง 19/12/24
+                </Typography>
+              </div>
+
               <div
                 style={{
+                  marginTop: 10,
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent: "right",
                   alignItems: "center",
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <DeleteOutlineRounded />
+                </IconButton>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <RemoveCircleOutlineRounded />
+                </IconButton>
                 <div
                   style={{
+                    backgroundColor: "#D9D9D9",
+                    width: 25,
+                    height: 25,
+                    borderRadius: 5,
                     display: "flex",
-                    justifyContent: "space-between",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <DeleteOutlineRounded />
-                  </IconButton>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <RemoveCircleOutlineRounded />
-                  </IconButton>
-                  <div
-                    style={{
-                      backgroundColor: "#D9D9D9",
-                      width: 25,
-                      height: 25,
-                      borderRadius: 5,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Typography style={{ textAlign: "center" }}>1</Typography>
-                  </div>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <AddCircleOutlineRounded />
-                  </IconButton>
+                  <Typography style={{ textAlign: "center" }}>1</Typography>
                 </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <AddCircleOutlineRounded />
+                </IconButton>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 270, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
+          <div className="box-item-preorder">
+            <div className="img-item-preorder">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, margin: 5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div style={{ display: "flex", justifyContent: "left" }}>
+                <MopedRounded />
+                <Typography style={{ fontSize: 14 }}>
+                  พร้อมจัดส่ง 19/12/24
+                </Typography>
+              </div>
+
               <div
                 style={{
+                  marginTop: 10,
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent: "right",
                   alignItems: "center",
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <MopedRounded />
-                  <Typography style={{ fontSize: 14 }}>
-                    พร้อมจัดส่ง 19/12/24
-                  </Typography>
-                </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <DeleteOutlineRounded />
+                </IconButton>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <RemoveCircleOutlineRounded />
+                </IconButton>
                 <div
                   style={{
+                    backgroundColor: "#D9D9D9",
+                    width: 25,
+                    height: 25,
+                    borderRadius: 5,
                     display: "flex",
-                    justifyContent: "space-between",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <DeleteOutlineRounded />
-                  </IconButton>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <RemoveCircleOutlineRounded />
-                  </IconButton>
-                  <div
-                    style={{
-                      backgroundColor: "#D9D9D9",
-                      width: 25,
-                      height: 25,
-                      borderRadius: 5,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Typography style={{ textAlign: "center" }}>1</Typography>
-                  </div>
-                  <IconButton style={{ width: 30, height: 17 }}>
-                    <AddCircleOutlineRounded />
-                  </IconButton>
+                  <Typography style={{ textAlign: "center" }}>1</Typography>
                 </div>
+                <IconButton style={{ width: 30, height: 17 }}>
+                  <AddCircleOutlineRounded />
+                </IconButton>
               </div>
             </div>
           </div>
-        </div>
-        <a href="/check_out">
+
           <div
             style={{
               justifyContent: "center",
               display: "flex",
               marginTop: 20,
+              bottom: 0,
             }}
           >
-            <Button className="btn-regis" variant="contained">
-              ดำเนินการต่อ
-            </Button>
+            <a href="/check_out">
+              <Button className="btn-regis" variant="contained">
+                ดำเนินการต่อ
+              </Button>
+            </a>
           </div>
-        </a>
-      </div>
+        </div>
 
-      <TapsProps />
+        <TapsProps />
+      </Box>
     </>
   );
 }

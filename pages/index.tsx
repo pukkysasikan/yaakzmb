@@ -2,7 +2,7 @@ import Head from "next/head";
 import * as React from "react";
 import Image from "next/image";
 import mypic from "../assets/imges/Yaakz_Profile-1000-01_(1)-transformed.png";
-import { Button, InputBase, Typography } from "@mui/material";
+import { Box, Button, InputBase, Typography } from "@mui/material";
 import {
   AddRounded,
   ErrorOutlineRounded,
@@ -26,52 +26,58 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-login" />
-      <div className="regis-container">
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Image src={mypic} width={200} height={200} alt="" />
-        </div>
-        <Typography style={{ textAlign: "center" }}>YAAKZ MEMBER</Typography>
-        <Typography style={{ textAlign: "center", marginTop: 20 }}>
-          กรอกเบอร์โทรศัพท์เพื่อลงทะเบียน
-        </Typography>
+      <Box className="container">
+        <div className="bg-login" />
+        <div className="regis-container">
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Image src={mypic} width={200} height={200} alt="" />
+          </div>
+          <Typography style={{ textAlign: "center" }}>YAAKZ MEMBER</Typography>
+          <Typography style={{ textAlign: "center", marginTop: 20 }}>
+            กรอกเบอร์โทรศัพท์เพื่อลงทะเบียน
+          </Typography>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            marginTop: 20,
-          }}
-        >
-          <Typography>เบอร์โทรศัพท์</Typography>
-          <div className="input">
-            <InputBase
-              onClick={() => setOpenDialog(true)}
-              sx={{ marginLeft: 6, marginTop: 0.5 }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
-        </div>
-        <a href="register">
           <div
-            style={{ justifyContent: "center", display: "flex", marginTop: 20 }}
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              marginTop: 20,
+            }}
           >
-            <Button className="btn-login" variant="contained">
-              ดำเนินการต่อ
-            </Button>
+            <Typography>เบอร์โทรศัพท์</Typography>
+            <div className="input">
+              <InputBase
+                onClick={() => setOpenDialog(true)}
+                sx={{ marginLeft: 6, marginTop: 0.5 }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
           </div>
-        </a>
-      </div>
-      <DialogProps
-        open={openDialog}
-        onClose={handleClose}
-        text="เบอร์โทศัพท์นี้มีบัญชีผู้ใช้แล้วกรุณาใช้เบอร์โทรศัพท์อื่น"
-        icon={
-          <ErrorOutlineRounded
-            style={{ width: 100, height: 100, color: "#5B5B5B" }}
-          />
-        }
-      />
+          <a href="register">
+            <div
+              style={{
+                justifyContent: "center",
+                display: "flex",
+                marginTop: 20,
+              }}
+            >
+              <Button className="btn-login" variant="contained">
+                ดำเนินการต่อ
+              </Button>
+            </div>
+          </a>
+        </div>
+        <DialogProps
+          open={openDialog}
+          onClose={handleClose}
+          text="เบอร์โทศัพท์นี้มีบัญชีผู้ใช้แล้วกรุณาใช้เบอร์โทรศัพท์อื่น"
+          icon={
+            <ErrorOutlineRounded
+              style={{ width: 100, height: 100, color: "#5B5B5B" }}
+            />
+          }
+        />
+      </Box>
     </>
   );
 }

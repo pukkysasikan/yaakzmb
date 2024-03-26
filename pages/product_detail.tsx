@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { AddRounded, ArrowBackIosNewRounded } from "@mui/icons-material";
 
 import TapsProps from "@/components/Tabs";
@@ -16,54 +16,56 @@ export default function ProductDetail() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="toolbar">
-        <IconButton onClick={() => router.back()}>
-          <ArrowBackIosNewRounded />
-        </IconButton>
-        <Typography style={{ fontSize: "24px" }}>รายละเอียดสินค้า</Typography>
-      </div>
-      <div className="box-image-product-detail">
-        <div className="box-image-product">
-          <img src="" />
-          <Typography>รูปภาพ</Typography>
+      <Box className="container">
+        <div className="toolbar">
+          <IconButton onClick={() => router.back()}>
+            <ArrowBackIosNewRounded />
+          </IconButton>
+          <Typography style={{ fontSize: "24px" }}>รายละเอียดสินค้า</Typography>
         </div>
-      </div>
-      <div className="product-detail-container">
-        <div>
-          <Typography
-            style={{ textAlign: "center", fontSize: "20px", padding: 20 }}
-          >
-            ยอดนักสืบจิ๋ว โคนัน ล.8 - วันสบายๆ ของซีโร่ (90)
-          </Typography>
-          <div className="text-product-detail-container">
-            <div className="text-product-detail-left">
-              <Typography>เล่มที่&nbsp;&nbsp;:</Typography>
-              <Typography>ราคาปก&nbsp;&nbsp;:</Typography>
-              <Typography>Barcode&nbsp;&nbsp;:</Typography>
-              <Typography>สำนักพิมพ์&nbsp;&nbsp;:</Typography>
-              <Typography>วันที่วางจำหน่าย&nbsp;&nbsp;:</Typography>
-            </div>
-            <div>
-              <Typography>90</Typography>
-              <Typography>90 บาท</Typography>
-              <Typography>9786165971171</Typography>
-              <Typography>No Information</Typography>
-              <Typography>12/12/66</Typography>
-            </div>
+        <div className="box-image-product-detail">
+          <div className="box-image-product">
+            <img src="" />
+            <Typography>รูปภาพ</Typography>
           </div>
         </div>
-        <div style={{ justifyContent: "center", display: "flex" }}>
-          <Button
-            style={{ width: "90%", borderRadius: 10 }}
-            variant="outlined"
-            color="info"
-          >
-            <AddRounded />
-            เพิ่มในคลัง
-          </Button>
+        <div className="product-detail-container">
+          <div>
+            <Typography
+              style={{ textAlign: "center", fontSize: "20px", padding: 20 }}
+            >
+              ยอดนักสืบจิ๋ว โคนัน ล.8 - วันสบายๆ ของซีโร่ (90)
+            </Typography>
+            <div className="text-product-detail-container">
+              <div className="text-product-detail-left">
+                <Typography>เล่มที่&nbsp;&nbsp;:</Typography>
+                <Typography>ราคาปก&nbsp;&nbsp;:</Typography>
+                <Typography>Barcode&nbsp;&nbsp;:</Typography>
+                <Typography>สำนักพิมพ์&nbsp;&nbsp;:</Typography>
+                <Typography>วันที่วางจำหน่าย&nbsp;&nbsp;:</Typography>
+              </div>
+              <div>
+                <Typography>90</Typography>
+                <Typography>90 บาท</Typography>
+                <Typography>9786165971171</Typography>
+                <Typography>No Information</Typography>
+                <Typography>12/12/66</Typography>
+              </div>
+            </div>
+          </div>
+          <div className="tabs-container">
+            <Button
+              style={{ width: "90%", borderRadius: 10 }}
+              variant="outlined"
+              color="info"
+            >
+              <AddRounded />
+              เพิ่มในคลัง
+            </Button>
+          </div>
         </div>
-      </div>
-      <TapsProps />
+        <TapsProps />
+      </Box>
     </>
   );
 }

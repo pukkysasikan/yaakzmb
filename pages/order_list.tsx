@@ -38,7 +38,7 @@ function CustomTabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <div style={{ padding: 10, display: "grid", justifyContent: "center" }}>
+        <div style={{ padding: 5, display: "grid", justifyContent: "center" }}>
           {children}
         </div>
       )}
@@ -111,109 +111,43 @@ export default function OrdeList() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "70px",
-          alignItems: "center",
-        }}
-      >
-        <Typography style={{ fontSize: "24px" }}>การสั่งซื้อ</Typography>
-      </div>
-      <div className="box-order-list">
+      <Box className="container">
         <div
           style={{
-            width: "100%",
             display: "flex",
             justifyContent: "center",
+            height: "70px",
+            alignItems: "center",
           }}
         >
-          <div className="box-tabs">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-            >
-              <Tab label="Yaakz Shop" {...a11yProps(0)} />
-              <Tab label="Yaakz Station" {...a11yProps(1)} />
-              <Tab label="Pre-Order" {...a11yProps(2)} />
-            </Tabs>
-          </div>
+          <Typography style={{ fontSize: "24px" }}>การสั่งซื้อ</Typography>
         </div>
-        <Divider style={{ color: "#5B5B5B", marginTop: 20 }} />
-
-        <CustomTabPanel value={value} index={0}>
+        <div className="box-order-list">
           <div
-            className="box-item"
-            onClick={(_) => setOpenDetailYaakShop(true)}
-          >
-            <div className="img-item">
-              <Typography>รูปภาพ</Typography>
-            </div>
-            <div style={{ width: 230, marginTop: -5 }}>
-              <Typography style={{ height: 55 }}>
-                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-              </Typography>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Typography style={{ fontSize: "14px" }}>
-                  วันที่ซื้อ : 11/12/66
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>รวม 80 บาท</Typography>
-              </div>
-            </div>
-          </div>
-          <div className="box-item">
-            <div className="img-item">
-              <Typography>รูปภาพ</Typography>
-            </div>
-            <div style={{ width: 230, marginTop: -5 }}>
-              <Typography style={{ height: 55 }}>
-                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-              </Typography>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Typography style={{ fontSize: "14px" }}>
-                  วันที่ซื้อ : 11/12/66
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>รวม 80 บาท</Typography>
-              </div>
-            </div>
-          </div>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          <Box
-            sx={{
-              borderBottom: 1,
-              borderColor: "divider",
-              display: "flex",
-              justifyContent: "space-evenly",
+            style={{
               width: "100%",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            <div className="box-tabs2">
+            <div className="box-tabs">
               <Tabs
-                value={valueStatus}
-                onChange={handleChangestatus}
+                value={value}
+                onChange={handleChange}
                 aria-label="basic tabs example"
-                style={{ width: "100%" }}
               >
-                <Tab
-                  style={{ width: "50%" }}
-                  label="รอดำเนินการ"
-                  {...a11yPropsStatus(0)}
-                />
-                <Tab
-                  style={{ width: "50%" }}
-                  label="สำเร็จ"
-                  {...a11yPropsStatus(1)}
-                />
+                <Tab label="Yaakz Shop" {...a11yProps(0)} />
+                <Tab label="Yaakz Station" {...a11yProps(1)} />
+                <Tab label="Pre-Order" {...a11yProps(2)} />
               </Tabs>
             </div>
-          </Box>
-          <CustomTabPanelStatus value={valueStatus} index={0}>
+          </div>
+          <Divider style={{ color: "#5B5B5B", marginTop: 20 }} />
+
+          <CustomTabPanel value={value} index={0}>
             <div
-              className="box-item-station"
-              onClick={(_) => setOpenDetail(true)}
+              className="box-item"
+              onClick={(_) => setOpenDetailYaakShop(true)}
             >
               <div className="img-item">
                 <Typography>รูปภาพ</Typography>
@@ -221,9 +155,6 @@ export default function OrdeList() {
               <div style={{ width: 230, marginTop: -5 }}>
                 <Typography style={{ height: 55 }}>
                   ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>
-                  เลขที่คำสั่งซื้อ
                 </Typography>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
@@ -235,24 +166,15 @@ export default function OrdeList() {
                     รวม 80 บาท
                   </Typography>
                 </div>
-                <QontoStepIcon step={1} />
               </div>
             </div>
-          </CustomTabPanelStatus>
-          <CustomTabPanelStatus value={valueStatus} index={1}>
-            <div
-              className="box-item-station"
-              onClick={(_) => setOpenDetailStatusSuccess(true)}
-            >
+            <div className="box-item">
               <div className="img-item">
                 <Typography>รูปภาพ</Typography>
               </div>
               <div style={{ width: 230, marginTop: -5 }}>
                 <Typography style={{ height: 55 }}>
                   ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>
-                  เลขที่คำสั่งซื้อ
                 </Typography>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
@@ -264,122 +186,210 @@ export default function OrdeList() {
                     รวม 80 บาท
                   </Typography>
                 </div>
-                <QontoStepIcon step={3} />
               </div>
             </div>
-          </CustomTabPanelStatus>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          <Box
-            sx={{
-              borderBottom: 1,
-              borderColor: "divider",
-              display: "flex",
-              justifyContent: "space-evenly",
-              width: "100%",
-            }}
-          >
-            <div className="box-tabs2">
-              <Tabs
-                value={valueStatus}
-                onChange={handleChangestatus}
-                aria-label="basic tabs example"
-                style={{ width: "100%" }}
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={1}>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: "divider",
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "100%",
+              }}
+            >
+              <div className="box-tabs2">
+                <Tabs
+                  value={valueStatus}
+                  onChange={handleChangestatus}
+                  aria-label="basic tabs example"
+                  style={{ width: "100%" }}
+                >
+                  <Tab
+                    style={{ width: "50%" }}
+                    label="รอดำเนินการ"
+                    {...a11yPropsStatus(0)}
+                  />
+                  <Tab
+                    style={{ width: "50%" }}
+                    label="สำเร็จ"
+                    {...a11yPropsStatus(1)}
+                  />
+                </Tabs>
+              </div>
+            </Box>
+            <CustomTabPanelStatus value={valueStatus} index={0}>
+              <div
+                className="box-item-station"
+                onClick={(_) => setOpenDetail(true)}
               >
-                <Tab
-                  style={{ width: "50%" }}
-                  label="รอดำเนินการ"
-                  {...a11yPropsStatus(0)}
-                />
-                <Tab
-                  style={{ width: "50%" }}
-                  label="สำเร็จ"
-                  {...a11yPropsStatus(1)}
-                />
-              </Tabs>
-            </div>
-          </Box>
-          <CustomTabPanelStatus value={valueStatus} index={0}>
-            <div
-              className="box-item-station"
-              onClick={(_) => setOpenDetail(true)}
-            >
-              <div className="img-item">
-                <Typography>รูปภาพ</Typography>
-              </div>
-              <div style={{ width: 230, marginTop: -5 }}>
-                <Typography style={{ height: 55 }}>
-                  ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>
-                  เลขที่คำสั่งซื้อ
-                </Typography>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <Typography style={{ fontSize: "14px" }}>
-                    วันที่ซื้อ : 11/12/66
-                  </Typography>
-                  <Typography style={{ fontSize: "14px" }}>
-                    รวม 80 บาท
-                  </Typography>
+                <div className="img-item">
+                  <Typography>รูปภาพ</Typography>
                 </div>
-                <QontoStepIcon step={1} />
-              </div>
-            </div>
-          </CustomTabPanelStatus>
-          <CustomTabPanelStatus value={valueStatus} index={1}>
-            <div
-              className="box-item-station"
-              onClick={(_) => setOpenDetailStatusSuccess(true)}
-            >
-              <div className="img-item">
-                <Typography>รูปภาพ</Typography>
-              </div>
-              <div style={{ width: 230, marginTop: -5 }}>
-                <Typography style={{ height: 55 }}>
-                  ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-                </Typography>
-                <Typography style={{ fontSize: "14px" }}>
-                  เลขที่คำสั่งซื้อ
-                </Typography>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <Typography style={{ fontSize: "14px" }}>
-                    วันที่ซื้อ : 11/12/66
+                <div style={{ width: 230, marginTop: -5 }}>
+                  <Typography style={{ height: 55 }}>
+                    ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                   </Typography>
                   <Typography style={{ fontSize: "14px" }}>
-                    รวม 80 บาท
+                    เลขที่คำสั่งซื้อ
                   </Typography>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography style={{ fontSize: "14px" }}>
+                      วันที่ซื้อ : 11/12/66
+                    </Typography>
+                    <Typography style={{ fontSize: "14px" }}>
+                      รวม 80 บาท
+                    </Typography>
+                  </div>
+                  <QontoStepIcon step={1} />
                 </div>
-                <QontoStepIcon step={3} />
               </div>
-            </div>
-          </CustomTabPanelStatus>
-        </CustomTabPanel>
-      </div>
+            </CustomTabPanelStatus>
+            <CustomTabPanelStatus value={valueStatus} index={1}>
+              <div
+                className="box-item-station"
+                onClick={(_) => setOpenDetailStatusSuccess(true)}
+              >
+                <div className="img-item">
+                  <Typography>รูปภาพ</Typography>
+                </div>
+                <div style={{ width: 230, marginTop: -5 }}>
+                  <Typography style={{ height: 55 }}>
+                    ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+                  </Typography>
+                  <Typography style={{ fontSize: "14px" }}>
+                    เลขที่คำสั่งซื้อ
+                  </Typography>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography style={{ fontSize: "14px" }}>
+                      วันที่ซื้อ : 11/12/66
+                    </Typography>
+                    <Typography style={{ fontSize: "14px" }}>
+                      รวม 80 บาท
+                    </Typography>
+                  </div>
+                  <QontoStepIcon step={3} />
+                </div>
+              </div>
+            </CustomTabPanelStatus>
+          </CustomTabPanel>
+          <CustomTabPanel value={value} index={2}>
+            <Box
+              sx={{
+                borderBottom: 1,
+                borderColor: "divider",
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "100%",
+              }}
+            >
+              <div className="box-tabs2">
+                <Tabs
+                  value={valueStatus}
+                  onChange={handleChangestatus}
+                  aria-label="basic tabs example"
+                  style={{ width: "100%" }}
+                >
+                  <Tab
+                    style={{ width: "50%" }}
+                    label="รอดำเนินการ"
+                    {...a11yPropsStatus(0)}
+                  />
+                  <Tab
+                    style={{ width: "50%" }}
+                    label="สำเร็จ"
+                    {...a11yPropsStatus(1)}
+                  />
+                </Tabs>
+              </div>
+            </Box>
+            <CustomTabPanelStatus value={valueStatus} index={0}>
+              <div
+                className="box-item-station"
+                onClick={(_) => setOpenDetail(true)}
+              >
+                <div className="img-item">
+                  <Typography>รูปภาพ</Typography>
+                </div>
+                <div style={{ width: 230, marginTop: -5 }}>
+                  <Typography style={{ height: 55 }}>
+                    ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+                  </Typography>
+                  <Typography style={{ fontSize: "14px" }}>
+                    เลขที่คำสั่งซื้อ
+                  </Typography>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography style={{ fontSize: "14px" }}>
+                      วันที่ซื้อ : 11/12/66
+                    </Typography>
+                    <Typography style={{ fontSize: "14px" }}>
+                      รวม 80 บาท
+                    </Typography>
+                  </div>
+                  <QontoStepIcon step={1} />
+                </div>
+              </div>
+            </CustomTabPanelStatus>
+            <CustomTabPanelStatus value={valueStatus} index={1}>
+              <div
+                className="box-item-station"
+                onClick={(_) => setOpenDetailStatusSuccess(true)}
+              >
+                <div className="img-item">
+                  <Typography>รูปภาพ</Typography>
+                </div>
+                <div style={{ width: 230, marginTop: -5 }}>
+                  <Typography style={{ height: 55 }}>
+                    ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+                  </Typography>
+                  <Typography style={{ fontSize: "14px" }}>
+                    เลขที่คำสั่งซื้อ
+                  </Typography>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography style={{ fontSize: "14px" }}>
+                      วันที่ซื้อ : 11/12/66
+                    </Typography>
+                    <Typography style={{ fontSize: "14px" }}>
+                      รวม 80 บาท
+                    </Typography>
+                  </div>
+                  <QontoStepIcon step={3} />
+                </div>
+              </div>
+            </CustomTabPanelStatus>
+          </CustomTabPanel>
+        </div>
 
-      <StatusDetailProps
-        text=""
-        onClose={handleClose}
-        open={openDetail}
-        step={1}
-      />
-      <StatusDetailProps
-        text=""
-        onClose={handleClose}
-        open={openDetailStatusSuccess}
-        step={3}
-      />
-      <StatusDetailProps
-        text="YaakzShop"
-        onClose={handleClose}
-        open={openDetailYaakShop}
-        step={3}
-      />
+        <StatusDetailProps
+          text=""
+          onClose={handleClose}
+          open={openDetail}
+          step={1}
+        />
+        <StatusDetailProps
+          text=""
+          onClose={handleClose}
+          open={openDetailStatusSuccess}
+          step={3}
+        />
+        <StatusDetailProps
+          text="YaakzShop"
+          onClose={handleClose}
+          open={openDetailYaakShop}
+          step={3}
+        />
 
-      <TapsProps />
+        <TapsProps />
+      </Box>
     </>
   );
 }

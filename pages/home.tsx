@@ -125,8 +125,8 @@ export default function Home() {
               backgroundColor: "#F1F1F1",
               width: "100%",
               height: 50,
-              marginTop: 10,
-              marginBottom: 10,
+              alignItems: "center",
+              display: "flex",
             }}
           >
             <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
@@ -144,9 +144,9 @@ export default function Home() {
               backgroundColor: "#F1F1F1",
               width: "100%",
               height: 50,
-              marginBottom: 10,
-              justifyContent: "space-between",
+              alignItems: "center",
               display: "flex",
+              justifyContent: "space-between",
             }}
           >
             <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
@@ -164,9 +164,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer>
-        <TapsProps />
-      </footer>
+
+      <TapsProps />
     </>
   );
 }
