@@ -3,7 +3,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import Image from "next/image";
+import mypic from "../assets/imges/1709677279796.jpg";
 
 interface ItemRewarsSlidersProps {
   slides: { title: string; description: string }[];
@@ -21,11 +23,33 @@ const ItemRewarsSliders: React.FC<ItemRewarsSlidersProps> = ({ slides }) => {
     <Slider {...settings}>
       {slides.map((slide, index) => (
         <div>
-          <div key={index} className="card-item-image-slider">
-            <a href="/detail_reward">
+          <Card key={index} className="card-item-image-slider">
+            <CardMedia
+              sx={{
+                width: 150,
+                height: 110,
+
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={mypic}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  position: "absolute",
+                  top: "0",
+                  left: "0",
+                }}
+              />
+            </CardMedia>
+            <CardContent>
               <Typography>{slide.title}</Typography>
-            </a>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       ))}
     </Slider>

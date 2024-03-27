@@ -24,7 +24,7 @@ export default function TapsProps() {
   const router = useRouter();
 
   const dawer = (
-    <div className="tabs-container">
+    <div className="bottom">
       <IconButton
         disabled={router.asPath === "/home" ? true : false}
         sx={{ display: "grid", justifyContent: "center" }}

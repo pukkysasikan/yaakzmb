@@ -118,7 +118,7 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="product-index-container2">
+      <div className="product-index-container">
         <div style={{ marginTop: 40 }}>
           <div
             style={{

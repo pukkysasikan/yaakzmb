@@ -1,7 +1,16 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Box, Button, IconButton, InputBase, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+  InputBase,
+  Typography,
+} from "@mui/material";
 import {
   AddRounded,
   ArrowBackIosNewRounded,
@@ -18,6 +27,8 @@ import {
 import ImageSlider from "../components/ImageSlider";
 import TapsProps from "@/components/Tabs";
 import router from "next/router";
+import Image from "next/image";
+import mypic from "../assets/imges/1709677279796.jpg";
 
 export default function Rewards() {
   const [searchPlaceholder, setSearchPlaceholder] =
@@ -105,67 +116,119 @@ export default function Rewards() {
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <a href="/detail_reward">
-                <div className="box-item-rewards">
-                  <div className="img-item-reward" />
-                  <Typography style={{ marginLeft: "5px" }}>กระเป๋า</Typography>
-                  <div className="point2">
-                    <Typography style={{ fontSize: "20px" }}>200</Typography>
-                    <div className="icon-point-reward">
-                      <div className="icon-point-reward2"></div>
-                      <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                        P
-                      </Typography>
+                <Card className="box-item-rewards">
+                  <CardMedia className="img-item-reward">
+                    <Image
+                      src={mypic}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        position: "absolute",
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ marginLeft: -1, marginTop: -1 }}>
+                    <Typography>กระเป๋า</Typography>
+                    <div className="point2">
+                      <Typography style={{ fontSize: "20px" }}>200</Typography>
+                      <div className="icon-point-reward">
+                        <div className="icon-point-reward2"></div>
+                        <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                          P
+                        </Typography>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </a>
               <a href="/detail_reward">
-                <div className="box-item-rewards">
-                  <div className="img-item-reward" />
-                  <Typography style={{ marginLeft: "5px" }}>กระเป๋า</Typography>
-                  <div className="point2">
-                    <Typography style={{ fontSize: "20px" }}>200</Typography>
-                    <div className="icon-point-reward">
-                      <div className="icon-point-reward2"></div>
-                      <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                        P
-                      </Typography>
+                <Card className="box-item-rewards">
+                  <CardMedia className="img-item-reward">
+                    <Image
+                      src={mypic}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        position: "absolute",
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ marginLeft: -1, marginTop: -1 }}>
+                    <Typography>กระเป๋า</Typography>
+                    <div className="point2">
+                      <Typography style={{ fontSize: "20px" }}>200</Typography>
+                      <div className="icon-point-reward">
+                        <div className="icon-point-reward2"></div>
+                        <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                          P
+                        </Typography>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </a>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center" }}>
               <a href="/detail_reward">
-                <div className="box-item-rewards">
-                  <div className="img-item-reward" />
-                  <Typography style={{ marginLeft: "5px" }}>กระเป๋า</Typography>
-                  <div className="point2">
-                    <Typography style={{ fontSize: "20px" }}>200</Typography>
-                    <div className="icon-point-reward">
-                      <div className="icon-point-reward2"></div>
-                      <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                        P
-                      </Typography>
+                <Card className="box-item-rewards">
+                  <CardMedia className="img-item-reward">
+                    <Image
+                      src={mypic}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        position: "absolute",
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ marginLeft: -1, marginTop: -1 }}>
+                    <Typography>กระเป๋า</Typography>
+                    <div className="point2">
+                      <Typography style={{ fontSize: "20px" }}>200</Typography>
+                      <div className="icon-point-reward">
+                        <div className="icon-point-reward2"></div>
+                        <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                          P
+                        </Typography>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </a>
               <a href="/detail_reward">
-                <div className="box-item-rewards">
-                  <div className="img-item-reward" />
-                  <Typography style={{ marginLeft: "5px" }}>กระเป๋า</Typography>
-                  <div className="point2">
-                    <Typography style={{ fontSize: "20px" }}>200</Typography>
-                    <div className="icon-point-reward">
-                      <div className="icon-point-reward2"></div>
-                      <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                        P
-                      </Typography>
+                <Card className="box-item-rewards">
+                  <CardMedia className="img-item-reward">
+                    <Image
+                      src={mypic}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        position: "absolute",
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ marginLeft: -1, marginTop: -1 }}>
+                    <Typography>กระเป๋า</Typography>
+                    <div className="point2">
+                      <Typography style={{ fontSize: "20px" }}>200</Typography>
+                      <div className="icon-point-reward">
+                        <div className="icon-point-reward2"></div>
+                        <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                          P
+                        </Typography>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </a>
             </div>
           </div>

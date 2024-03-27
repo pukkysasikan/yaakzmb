@@ -4,10 +4,20 @@ import {
   ArrowBackIosNewRounded,
   CheckCircleOutlined,
 } from "@mui/icons-material";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import Image from "next/image";
+import mypic from "../assets/imges/1709677279796.jpg";
 
 export default function ItemDetailRewards() {
   const [openSuccess, setOpenSuccess] = React.useState(false);
@@ -33,16 +43,29 @@ export default function ItemDetailRewards() {
           <Typography style={{ fontSize: 24 }}>รายละเอียดสินค้า</Typography>
         </div>
         <div className="product-index-container">
-          <div style={{ display: "grid", justifyContent: "center" }}>
-            <div className="img-detail-reward"></div>
-            <Typography style={{ fontSize: 20 }}>ถุงผ้า รุ่นโกลว์</Typography>
-            <Typography>
-              ถุงผ้า รุ่นโกลว์ ขนาด 40 X 0.3 X 45 ซม. - สีเบจ/ดำ
-            </Typography>
-          </div>
+          <Card sx={{ boxShadow: "none" }}>
+            <CardMedia className="img-detail-reward">
+              <Image
+                src={mypic}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+            </CardMedia>
+            <CardContent>
+              <Typography style={{ fontSize: 20 }}>ถุงผ้า รุ่นโกลว์</Typography>
+              <Typography>
+                ถุงผ้า รุ่นโกลว์ ขนาด 40 X 0.3 X 45 ซม. - สีเบจ/ดำ
+              </Typography>
+            </CardContent>
+          </Card>
         </div>
 
-        <div className="tabs-container">
+        <div className="bottom">
           <div className="box-btn-reward">
             <div
               style={{
