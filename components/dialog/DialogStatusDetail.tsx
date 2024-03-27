@@ -38,6 +38,9 @@ export default function StatusDetailProps(props: StatusDetailProps) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                width: "100%",
+                margin: 0,
+                padding: 0,
               }}
             >
               <QontoStepIcon step={props.step} />

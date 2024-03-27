@@ -530,7 +530,7 @@ a {
 .box-status {
   margin-top: 20px;
   background-color: #f9f9f9;
-  width: 100%;
+  width: 98%;
   height: 80px;
   border-radius: 20px;
   padding: 2px;
@@ -539,7 +539,7 @@ a {
 .box-status-item {
   margin-top: 20px;
   background-color: #f9f9f9;
-  width: 100%;
+  width: 98%;
   height: 60px;
   border-radius: 10px;
   align-items: center;

@@ -79,7 +79,17 @@ const steps = ["รอดำเนินการ", "รับเข้าสา
 
 export default function CustomizedSteppers(props2: StepProps) {
   return (
-    <Stack style={{ marginLeft: -25 }}>
+    <Stack
+      style={{
+        marginLeft: -25,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        margin: 0,
+        padding: 0,
+      }}
+    >
       <Stepper
         sx={{ width: 270, paddingTop: 0.5 }}
         alternativeLabel
