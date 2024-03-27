@@ -98,12 +98,7 @@ export default function CustomizedSteppers(props2: StepProps) {
       >
         {steps.map((label) => (
           <Step key={label}>
-            <StepLabel
-              style={{ fontSize: 12 }}
-              StepIconComponent={QontoStepIcon}
-            >
-              {label}
-            </StepLabel>
+            <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>

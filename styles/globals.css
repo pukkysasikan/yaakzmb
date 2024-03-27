@@ -524,7 +524,7 @@ a {
 }
 
 .css-1qraw1m-MuiStepLabel-label {
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 .box-status {
