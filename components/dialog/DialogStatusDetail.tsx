@@ -24,7 +24,7 @@ export default function StatusDetailProps(props: StatusDetailProps) {
         <Typography>YAAKZ SHOP สาขาเดอะมอลล์ บางกะปิ</Typography>
         <CloseRounded onClick={props.onClose} />
       </DialogTitle>
-      <DialogContent>
+      <DialogContent style={{ padding: 15 }}>
         <Typography>เลขที่คำสั่งซื้อ : 392024/000000042</Typography>
         <Typography>วันที่ซื้อ : 21/02/67 12:33</Typography>
 

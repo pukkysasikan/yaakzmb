@@ -84,7 +84,7 @@ export default function CustomizedSteppers(props2: StepProps) {
         marginLeft: -25,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         width: "100%",
         margin: 0,
         padding: 0,
