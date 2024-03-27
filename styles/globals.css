@@ -524,11 +524,19 @@ a {
 }
 
 .css-1qraw1m-MuiStepLabel-label {
-  font-size: 10px !important;
+  font-size: 12px !important;
 }
 
 .css-12zaef5 {
-  font-size: 10px !important;
+  font-size: 12px !important;
+}
+
+.css-12zaef5.MuiStepLabel-alternativeLabel {
+  margin-top: 0px;
+}
+
+.css-1hds57e {
+  background-color: "none" !important;
 }
 
 .box-status {
