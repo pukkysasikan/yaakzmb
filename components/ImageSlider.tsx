@@ -29,7 +29,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
-        <div>
+        <div style={{ marginBottom: 10 }}>
           <Card key={index} className="card-item-image-slider">
             <CardMedia
               sx={{

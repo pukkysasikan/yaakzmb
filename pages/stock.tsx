@@ -99,10 +99,6 @@ export default function Stock() {
           <div style={{ marginBottom: 10 }}>
             <ImageSlider slides={slides} />
           </div>
-
-          <div style={{ marginBottom: 10 }}>
-            <ImageSlider slides={slides} />
-          </div>
         </div>
         <div style={{ height: 70 }} />
       </div>
