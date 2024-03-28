@@ -82,7 +82,7 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
-          <div className="bottom-btn">
+          <div className="bottom-btn-add">
             <Button color="info" className="btn-regis" variant="contained">
               ดำเนินการต่อ
             </Button>
