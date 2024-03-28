@@ -96,11 +96,11 @@ export default function Stock() {
               ที่เพิ่มในคลังล่าสุด
             </Typography>
           </div>
-          <div>
+          <div style={{ marginBottom: 10 }}>
             <ImageSlider slides={slides} />
           </div>
 
-          <div>
+          <div style={{ marginBottom: 10 }}>
             <ImageSlider slides={slides} />
           </div>
         </div>
