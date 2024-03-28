@@ -34,6 +34,7 @@ export default function SearchProduct() {
         <Typography style={{ fontSize: "24px", marginRight: 30 }}>
           ผลการค้นหา
         </Typography>
+        <div />
       </div>
 
       <Typography

@@ -34,7 +34,7 @@ export default function Register() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box className="container">
+      <Box className="container2">
         <div className="bg-regis" />
         <div className="regis-container">
           <div style={{ display: "flex", justifyContent: "center" }}>

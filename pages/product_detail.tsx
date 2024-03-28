@@ -22,6 +22,7 @@ export default function ProductDetail() {
             <ArrowBackIosNewRounded />
           </IconButton>
           <Typography style={{ fontSize: "24px" }}>รายละเอียดสินค้า</Typography>
+          <div />
         </div>
         <div className="box-image-product-detail">
           <div className="box-image-product">
@@ -53,14 +54,12 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
-          <div className="tabs-container">
-            <Button className="btn-regis">
-              <AddRounded />
-              เพิ่มในคลัง
+          <div className="bottom-btn">
+            <Button color="info" className="btn-regis" variant="contained">
+              ดำเนินการต่อ
             </Button>
           </div>
         </div>
-        <TapsProps />
       </Box>
     </>
   );

@@ -26,7 +26,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box className="container">
+      <Box className="container2">
         <div className="bg-login" />
         <div className="regis-container">
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -48,7 +48,11 @@ export default function Index() {
               <InputBase
                 placeholder="เบอร์โทรศัพท์"
                 onClick={() => setOpenDialog(true)}
-                sx={{ marginLeft: 6, marginTop: 0.5 }}
+                sx={{
+                  marginLeft: 3,
+                  marginTop: 0.5,
+                  width: "100%",
+                }}
                 inputProps={{ "aria-label": "search" }}
               />
             </div>

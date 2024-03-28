@@ -23,6 +23,7 @@ export default function StockDetail() {
         <Typography style={{ fontSize: "24px", marginRight: 20 }}>
           คลังของฉัน
         </Typography>
+        <div />
       </div>
 
       <Typography

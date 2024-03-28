@@ -23,33 +23,35 @@ const ItemRewarsSliders: React.FC<ItemRewarsSlidersProps> = ({ slides }) => {
     <Slider {...settings}>
       {slides.map((slide, index) => (
         <div>
-          <Card key={index} className="card-item-image-slider">
-            <CardMedia
-              sx={{
-                width: 150,
-                height: 110,
+          <a href="detail_reward">
+            <Card key={index} className="card-item-image-slider">
+              <CardMedia
+                sx={{
+                  width: 150,
+                  height: 110,
 
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={mypic}
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
-              />
-            </CardMedia>
-            <CardContent>
-              <Typography>{slide.title}</Typography>
-            </CardContent>
-          </Card>
+              >
+                <Image
+                  src={mypic}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                  }}
+                />
+              </CardMedia>
+              <CardContent>
+                <Typography>{slide.title}</Typography>
+              </CardContent>
+            </Card>
+          </a>
         </div>
       ))}
     </Slider>
