@@ -37,8 +37,9 @@ export default function Stock() {
         <Typography style={{ fontSize: 24, marginRight: 20 }}>
           คลังของฉัน
         </Typography>
+        <div />
       </div>
-      <div style={{ height: 805 }}>
+      <div className="container">
         <div style={{ height: 300 }}>
           <div
             style={{
@@ -98,12 +99,15 @@ export default function Stock() {
           <div>
             <ImageSlider slides={slides} />
           </div>
+
+          <div>
+            <ImageSlider slides={slides} />
+          </div>
         </div>
+        <div style={{ height: 70 }} />
       </div>
 
-      <footer>
-        <TapsProps />
-      </footer>
+      <TapsProps />
     </>
   );
 }

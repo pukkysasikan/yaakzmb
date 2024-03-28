@@ -112,15 +112,10 @@ export default function OrdeList() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box className="container">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            height: "70px",
-            alignItems: "center",
-          }}
-        >
+        <div className="toolbar">
+          <div />
           <Typography style={{ fontSize: "24px" }}>การสั่งซื้อ</Typography>
+          <div />
         </div>
         <div className="box-order-list">
           <div

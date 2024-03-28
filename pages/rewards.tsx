@@ -63,6 +63,7 @@ export default function Rewards() {
             <ArrowBackIosNewRounded />
           </IconButton>
           <Typography style={{ fontSize: 24 }}>แลกของรางวัล</Typography>
+          <div />
         </div>
         <div className="box-points">
           <div className="box-points-left">

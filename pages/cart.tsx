@@ -34,6 +34,7 @@ export default function Cart() {
           <Typography style={{ fontSize: 24, marginRight: 50 }}>
             ตะกร้า
           </Typography>
+          <div />
         </div>
 
         <div className="box-search-item2">
@@ -182,21 +183,13 @@ export default function Cart() {
             </div>
           </div>
           <a href="check_out">
-            <div
-              style={{
-                justifyContent: "center",
-                display: "flex",
-                marginTop: 20,
-              }}
-            >
+            <div className="bottom-btn">
               <Button className="btn-login" variant="contained">
                 ดำเนินการต่อ
               </Button>
             </div>
           </a>
         </div>
-
-        <TapsProps />
       </Box>
     </>
   );

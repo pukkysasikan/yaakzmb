@@ -41,9 +41,16 @@ export default function ItemDetailRewards() {
             <ArrowBackIosNewRounded />
           </IconButton>
           <Typography style={{ fontSize: 24 }}>รายละเอียดสินค้า</Typography>
+          <div />
         </div>
         <div className="product-index-container">
-          <Card sx={{ boxShadow: "none" }}>
+          <Card
+            sx={{
+              boxShadow: "none",
+              display: "grid",
+              justifyContent: "center",
+            }}
+          >
             <CardMedia className="img-detail-reward">
               <Image
                 src={mypic}

@@ -38,6 +38,7 @@ export default function Cart() {
           <Typography style={{ fontSize: "24px", marginRight: 50 }}>
             สั่งซื้อ
           </Typography>
+          <div />
         </div>
 
         <div className="box-chk-item">
@@ -168,13 +169,7 @@ export default function Cart() {
             </div>
           </div>
           <a href="order_list">
-            <div
-              style={{
-                justifyContent: "center",
-                display: "flex",
-                marginTop: 20,
-              }}
-            >
+            <div className="bottom-btn">
               <Button
                 className="btn-login"
                 variant="contained"
@@ -196,8 +191,6 @@ export default function Cart() {
           }
         />
         <DialogEditUserProps open={openEditUser} onClose={handleClose} />
-
-        <TapsProps />
       </Box>
     </>
   );

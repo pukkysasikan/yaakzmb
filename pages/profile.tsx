@@ -3,6 +3,7 @@ import * as React from "react";
 
 import {
   Avatar,
+  Box,
   Button,
   Dialog,
   DialogContent,
@@ -55,89 +56,95 @@ export default function Profile() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="toolbar" />
-      <div style={{ display: "grid", justifyContent: "center" }}>
-        <Avatar
-          style={{ width: 80, height: 80, marginLeft: 10 }}
-          alt="Pukky"
-          src="/static/images/avatar/1.jpg"
-        />
-
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Typography
-            style={{
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              fontSize: 24,
-            }}
-          >
-            Pukky
-          </Typography>
-          <IconButton onClick={() => setOpenEditUser(true)}>
-            <ModeEditOutlineRounded />
-          </IconButton>
-        </div>
+      <div className="toolbar">
+        <div />
+        <Typography style={{ fontSize: "24px" }}>โปรไฟล์</Typography>
+        <div />
       </div>
+      <Box className="container">
+        <div style={{ display: "grid", justifyContent: "center" }}>
+          <Avatar
+            style={{ width: 80, height: 80, marginLeft: 10 }}
+            alt="Pukky"
+            src="/static/images/avatar/1.jpg"
+          />
 
-      <div className="box-points-profile">
-        <div className="box-points-profile-left">
-          <CardGiftcardRounded sx={{ width: 40, height: 40 }} />
-          <div>
-            <Typography style={{ fontSize: "12px", marginBottom: 5 }}>
-              คะแนนสะสม
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Typography
+              style={{
+                textAlign: "center",
+                display: "flex",
+                alignItems: "center",
+                fontSize: 24,
+              }}
+            >
+              Pukky
             </Typography>
-            <div className="point">
-              <Typography style={{ fontSize: "20px" }}>200</Typography>
-              <div className="icon-point">
-                <div className="icon-point2"></div>
-                <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                  P
-                </Typography>
+            <IconButton onClick={() => setOpenEditUser(true)}>
+              <ModeEditOutlineRounded />
+            </IconButton>
+          </div>
+        </div>
+
+        <div className="box-points-profile">
+          <div className="box-points-profile-left">
+            <CardGiftcardRounded sx={{ width: 40, height: 40 }} />
+            <div>
+              <Typography style={{ fontSize: "12px", marginBottom: 5 }}>
+                คะแนนสะสม
+              </Typography>
+              <div className="point">
+                <Typography style={{ fontSize: "20px" }}>200</Typography>
+                <div className="icon-point">
+                  <div className="icon-point2"></div>
+                  <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                    P
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-points-profile-right">
-          <Typography style={{ fontSize: "14px" }}>30คะแนน</Typography>
-          <Typography style={{ fontSize: "14px", marginBottom: 5 }}>
-            คะแนนหมดอายุ 31 ธ.ค. 67
-          </Typography>
-          <a href="/rewards">
-            {" "}
-            <Button
-              className="point-detail"
-              variant="contained"
-              color="secondary"
-            >
-              <Typography style={{ fontSize: "14px" }}>
-                ดูรายละเอียดเพิ่มเติม
-              </Typography>
-            </Button>
-          </a>
-        </div>
-      </div>
-
-      <div className="product-index-container">
-        <div style={{ marginTop: 40 }}>
-          <div
-            style={{
-              backgroundColor: "#F1F1F1",
-              width: "100%",
-              height: 50,
-              alignItems: "center",
-              display: "flex",
-            }}
-          >
-            <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
-              แลกของรางวัล
+          <div className="box-points-profile-right">
+            <Typography style={{ fontSize: "14px" }}>30คะแนน</Typography>
+            <Typography style={{ fontSize: "14px", marginBottom: 5 }}>
+              คะแนนหมดอายุ 31 ธ.ค. 67
             </Typography>
-          </div>
-          <div>
-            <ItemRewarsSliders slides={slides} />
+            <a href="/rewards">
+              {" "}
+              <Button
+                className="point-detail"
+                variant="contained"
+                color="secondary"
+              >
+                <Typography style={{ fontSize: "14px" }}>
+                  ดูรายละเอียดเพิ่มเติม
+                </Typography>
+              </Button>
+            </a>
           </div>
         </div>
-      </div>
+
+        <div className="product-index-container">
+          <div style={{ marginTop: 40 }}>
+            <div
+              style={{
+                backgroundColor: "#F1F1F1",
+                width: "100%",
+                height: 50,
+                alignItems: "center",
+                display: "flex",
+              }}
+            >
+              <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
+                แลกของรางวัล
+              </Typography>
+            </div>
+            <div>
+              <ItemRewarsSliders slides={slides} />
+            </div>
+          </div>
+        </div>
+      </Box>
       <footer>
         <TapsProps />
       </footer>

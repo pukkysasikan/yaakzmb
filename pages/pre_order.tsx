@@ -26,7 +26,7 @@ export default function PreOrder() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box className="container">
-        <div className="toolbar-cart">
+        <div className="toolbar">
           <IconButton onClick={() => router.back()}>
             <ArrowBackIosNewRounded />
           </IconButton>

@@ -10,7 +10,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 393px;
-  height: 852px;
+  min-height: 852px;
 }
 a {
   color: inherit;
@@ -24,24 +24,34 @@ a {
 }
 
 .container {
+  margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
   width: 393px;
   height: 852px;
-  overflow: scroll;
 }
 
 .bottom {
-  position: fixed; /* กำหนดให้ติดตั้งอยู่แน่นหน้าจอ */
-  bottom: 0; /* ติดตั้งไว้ด้านล่างของหน้าจอ */
+  position: fixed;
+  bottom: 0;
   justify-content: space-evenly;
   display: flex;
-  padding: 0;
-  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  z-index: 1000;
   background-color: #fff;
   width: 393px;
 }
 
+.bottom-btn {
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  display: flex;
+  z-index: 1000;
+  width: 380px;
+  margin-bottom: 30px;
+}
 .box-search-item {
   display: flex;
   justify-content: center;
@@ -218,31 +228,27 @@ a {
   width: 141px;
   height: 174px;
   border-radius: 20px;
-
   margin-top: 20px;
 }
 
 .toolbar {
-  height: 70px;
-  width: 70%;
+  position: fixed; /* กำหนดให้ติดตั้งอยู่แน่นหน้าจอ */
+  top: 0; /* ติดตั้งไว้ด้านล่างของหน้าจอ */
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.toolbar-cart {
+  padding: 0;
+  z-index: 999;
+  background-color: #fff;
+  width: 393px;
   height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .box-search-item2 {
   background-color: #f5f5f5;
   border-radius: 20px 20px 0px 0px;
   margin-top: 20px;
-  height: 765px;
+  height: 895px;
   width: 100%;
   display: grid;
   justify-content: center;
@@ -497,6 +503,7 @@ a {
 .box-tabs {
   background-color: #d9d9d9;
   width: 95%;
+
   display: flex;
   justify-content: space-evenly;
   border-radius: 20px;
@@ -595,9 +602,10 @@ a {
 }
 
 .img-detail-reward {
-  width: 395px;
+  width: 350px;
   height: 300px;
   border-radius: 20px;
+  margin: 10px;
   margin-bottom: 10px;
   background-color: #f1f1f1;
   position: relative;

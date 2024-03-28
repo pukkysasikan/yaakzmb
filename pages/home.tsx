@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Button, InputBase, Typography } from "@mui/material";
+import { Box, Button, InputBase, Typography } from "@mui/material";
 import {
   AddRounded,
   CardGiftcardRounded,
@@ -44,32 +44,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "70px",
-          alignItems: "center",
-        }}
-      >
+      <div className="toolbar">
+        <div />
         <Typography style={{ fontSize: "24px" }}>หน้าแรก</Typography>
+        <div />
       </div>
-      <div className="box-search-item">
-        <div className="search-item">
-          <Search>
-            <SearchIconWrapper>
-              <SearchOutlined />
-            </SearchIconWrapper>
-            <a href="/search_product" style={{ cursor: "pointer" }}>
-              <InputBase
-                sx={{ marginLeft: 6, marginTop: 0.5 }}
-                placeholder={searchPlaceholder}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </a>
-          </Search>
-        </div>
-        {/* <div>
+      <Box className="container">
+        <div className="box-search-item">
+          <div className="search-item">
+            <Search>
+              <SearchIconWrapper>
+                <SearchOutlined />
+              </SearchIconWrapper>
+              <a href="/search_product" style={{ cursor: "pointer" }}>
+                <InputBase
+                  sx={{ marginLeft: 6, marginTop: 0.5 }}
+                  placeholder={searchPlaceholder}
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </a>
+            </Search>
+          </div>
+          {/* <div>
           <Button
             className="btn-add-item"
             variant="contained"
@@ -79,91 +75,92 @@ export default function Home() {
             <MenuBookRounded />
           </Button>
         </div> */}
-      </div>
+        </div>
 
-      <div className="box-points">
-        <div className="box-points-left">
-          <CardGiftcardRounded sx={{ width: 40, height: 40 }} />
-          <div>
-            <Typography style={{ fontSize: "12px", marginBottom: 5 }}>
-              คะแนนสะสม
-            </Typography>
-            <div className="point">
-              <Typography style={{ fontSize: "20px" }}>200</Typography>
-              <div className="icon-point">
-                <div className="icon-point2"></div>
-                <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
-                  P
-                </Typography>
+        <div className="box-points">
+          <div className="box-points-left">
+            <CardGiftcardRounded sx={{ width: 40, height: 40 }} />
+            <div>
+              <Typography style={{ fontSize: "12px", marginBottom: 5 }}>
+                คะแนนสะสม
+              </Typography>
+              <div className="point">
+                <Typography style={{ fontSize: "20px" }}>200</Typography>
+                <div className="icon-point">
+                  <div className="icon-point2"></div>
+                  <Typography sx={{ mt: -2.6, ml: 0.8, color: "#fff" }}>
+                    P
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="box-points-right">
-          <Typography style={{ fontSize: "14px" }}>30คะแนน</Typography>
-          <Typography style={{ fontSize: "14px", marginBottom: 5 }}>
-            คะแนนหมดอายุ 31 ธ.ค. 67
-          </Typography>
-          <a href="/rewards">
-            <Button
-              className="point-detail"
-              variant="contained"
-              color="secondary"
-            >
-              <Typography style={{ fontSize: "14px" }}>
-                ดูรายละเอียดเพิ่มเติม
-              </Typography>
-            </Button>
-          </a>
-        </div>
-      </div>
-
-      <div className="product-index-container">
-        <div style={{ marginTop: 40 }}>
-          <div
-            style={{
-              backgroundColor: "#F1F1F1",
-              width: "100%",
-              height: 50,
-              alignItems: "center",
-              display: "flex",
-            }}
-          >
-            <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
-              โปรโมชั่น
+          <div className="box-points-right">
+            <Typography style={{ fontSize: "14px" }}>30คะแนน</Typography>
+            <Typography style={{ fontSize: "14px", marginBottom: 5 }}>
+              คะแนนหมดอายุ 31 ธ.ค. 67
             </Typography>
-          </div>
-          <div>
-            <ImageSlider slides={slides} />
-          </div>
-        </div>
-
-        <div style={{ marginTop: 40 }}>
-          <div
-            style={{
-              backgroundColor: "#F1F1F1",
-              width: "100%",
-              height: 50,
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
-              Pre- Order
-            </Typography>
-
-            <a href="pre_order">
-              <Typography style={{ fontSize: "18px", marginRight: 20 }}>
-                ดูเพิ่มเติม
-              </Typography>
+            <a href="/rewards">
+              <Button
+                className="point-detail"
+                variant="contained"
+                color="secondary"
+              >
+                <Typography style={{ fontSize: "14px" }}>
+                  ดูรายละเอียดเพิ่มเติม
+                </Typography>
+              </Button>
             </a>
           </div>
-          <div>
-            <ImageSlider slides={slides} />
+        </div>
+
+        <div className="product-index-container">
+          <div style={{ marginTop: 40 }}>
+            <div
+              style={{
+                backgroundColor: "#F1F1F1",
+                width: "100%",
+                height: 50,
+                alignItems: "center",
+                display: "flex",
+              }}
+            >
+              <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
+                โปรโมชั่น
+              </Typography>
+            </div>
+            <div>
+              <ImageSlider slides={slides} />
+            </div>
+          </div>
+
+          <div style={{ marginTop: 40 }}>
+            <div
+              style={{
+                backgroundColor: "#F1F1F1",
+                width: "100%",
+                height: 50,
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <Typography style={{ fontSize: "22px", marginLeft: 20 }}>
+                Pre- Order
+              </Typography>
+
+              <a href="pre_order">
+                <Typography style={{ fontSize: "18px", marginRight: 20 }}>
+                  ดูเพิ่มเติม
+                </Typography>
+              </a>
+            </div>
+            <div>
+              <ImageSlider slides={slides} />
+            </div>
           </div>
         </div>
-      </div>
+      </Box>
 
       <TapsProps />
     </>
