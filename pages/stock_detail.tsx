@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 
 import TapsProps from "@/components/Tabs";
 import { ArrowBackIosNewRounded } from "@mui/icons-material";
@@ -25,34 +25,50 @@ export default function StockDetail() {
         </Typography>
         <div />
       </div>
+      <Box className="container">
+        <Typography
+          style={{
+            justifyContent: "left",
+            display: "flex",
 
-      <Typography
-        style={{
-          justifyContent: "left",
-          display: "flex",
-
-          marginLeft: 20,
-          fontSize: "24px",
-        }}
-      >
-        NoInformation
-      </Typography>
-      <div
-        style={{
-          justifyContent: "left",
-          display: "flex",
-          gap: 20,
-          marginLeft: 20,
-        }}
-      >
-        <div>
-          <Typography>ทั้งหมด</Typography>
-          <Typography>200</Typography>
-          <Typography>เล่ม</Typography>
+            marginLeft: 20,
+            fontSize: "24px",
+          }}
+        >
+          NoInformation
+        </Typography>
+        <div
+          style={{
+            justifyContent: "left",
+            display: "flex",
+            gap: 20,
+            marginLeft: 20,
+          }}
+        >
+          <div>
+            <Typography>ทั้งหมด</Typography>
+            <Typography>200</Typography>
+            <Typography>เล่ม</Typography>
+          </div>
         </div>
-      </div>
-      <div className="box-search-item2">
-        <a href="/product_detail">
+        <div className="box-search-item2">
+          <a href="/product_detail">
+            <div className="box-item">
+              <div className="img-item">
+                <Typography>รูปภาพ</Typography>
+              </div>
+              <div style={{ width: 230, marginTop: -5 }}>
+                <Typography style={{ height: 55 }}>
+                  ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+                </Typography>
+                <div>
+                  <Typography style={{ fontSize: "14px" }}>
+                    เพิ่มในคลังเมื่อ 12/12/66
+                  </Typography>
+                </div>
+              </div>
+            </div>
+          </a>
           <div className="box-item">
             <div className="img-item">
               <Typography>รูปภาพ</Typography>
@@ -68,53 +84,38 @@ export default function StockDetail() {
               </div>
             </div>
           </div>
-        </a>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 230, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <Typography style={{ fontSize: "14px" }}>
-                เพิ่มในคลังเมื่อ 12/12/66
+          <div className="box-item">
+            <div className="img-item">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: -5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
               </Typography>
+              <div>
+                <Typography style={{ fontSize: "14px" }}>
+                  เพิ่มในคลังเมื่อ 12/12/66
+                </Typography>
+              </div>
+            </div>
+          </div>
+          <div className="box-item">
+            <div className="img-item">
+              <Typography>รูปภาพ</Typography>
+            </div>
+            <div style={{ width: 230, marginTop: -5 }}>
+              <Typography style={{ height: 55 }}>
+                ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
+              </Typography>
+              <div>
+                <Typography style={{ fontSize: "14px" }}>
+                  เพิ่มในคลังเมื่อ 12/12/66
+                </Typography>
+              </div>
             </div>
           </div>
         </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 230, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <Typography style={{ fontSize: "14px" }}>
-                เพิ่มในคลังเมื่อ 12/12/66
-              </Typography>
-            </div>
-          </div>
-        </div>
-        <div className="box-item">
-          <div className="img-item">
-            <Typography>รูปภาพ</Typography>
-          </div>
-          <div style={{ width: 230, marginTop: -5 }}>
-            <Typography style={{ height: 55 }}>
-              ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
-            </Typography>
-            <div>
-              <Typography style={{ fontSize: "14px" }}>
-                เพิ่มในคลังเมื่อ 12/12/66
-              </Typography>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Box>
     </>
   );
 }

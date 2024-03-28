@@ -62,28 +62,27 @@ export default function Profile() {
         <div />
       </div>
       <Box className="container">
-        <div style={{ display: "grid", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <Avatar
             style={{ width: 80, height: 80, marginLeft: 10 }}
             alt="Pukky"
             src="/static/images/avatar/1.jpg"
           />
-
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Typography
-              style={{
-                textAlign: "center",
-                display: "flex",
-                alignItems: "center",
-                fontSize: 24,
-              }}
-            >
-              Pukky
-            </Typography>
-            <IconButton onClick={() => setOpenEditUser(true)}>
-              <ModeEditOutlineRounded />
-            </IconButton>
-          </div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Typography
+            style={{
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              fontSize: 24,
+            }}
+          >
+            Pukky
+          </Typography>
+          <IconButton onClick={() => setOpenEditUser(true)}>
+            <ModeEditOutlineRounded />
+          </IconButton>
         </div>
 
         <div className="box-points-profile">
@@ -145,9 +144,8 @@ export default function Profile() {
           </div>
         </div>
       </Box>
-      <footer>
-        <TapsProps />
-      </footer>
+      <TapsProps />
+
       <DialogEditUserProps open={openEditUser} onClose={handleClose} />
     </>
   );
