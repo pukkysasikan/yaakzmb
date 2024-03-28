@@ -99,8 +99,6 @@ export default function PreOrder() {
             </div>
           </div>
         </div>
-
-        <TapsProps />
       </Box>
     </>
   );
