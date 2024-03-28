@@ -37,11 +37,9 @@ export default function Register() {
       <Box className="container2">
         <div className="bg-regis" />
         <div className="regis-container">
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src={mypic} width={180} height={180} alt="" />
-          </div>
-          <Typography style={{ textAlign: "center" }}>YAAKZ MEMBER</Typography>
-          <Typography style={{ textAlign: "center", marginTop: 10 }}>
+          <Typography
+            style={{ textAlign: "center", paddingTop: 20, fontSize: 20 }}
+          >
             ลงทะเบียน
           </Typography>
 
