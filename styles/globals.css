@@ -32,13 +32,13 @@ a {
 }
 
 .bottom {
-  bottom: 0;
+  position: fixed; /* กำหนดให้ติดตั้งอยู่แน่นหน้าจอ */
+  bottom: 0; /* ติดตั้งไว้ด้านล่างของหน้าจอ */
   justify-content: space-evenly;
   display: flex;
   padding: 0;
   z-index: 999;
   background-color: #fff;
-
   width: 393px;
 }
 
@@ -395,7 +395,7 @@ a {
 }
 
 .css-uwi3e2-MuiTabs-indicator {
-  position: absolute;
+  position: fixed;
   height: 2px;
   bottom: 0;
   width: 100%;
@@ -463,7 +463,7 @@ a {
 
 .bg-select-address2 {
   background-color: #f1f1f1;
-  width: 155px;
+  width: 100%;
   height: 37px;
   border-radius: 10px;
 }
@@ -509,8 +509,6 @@ a {
   justify-content: space-evenly;
 }
 
-/* เมื่อ hover ที่แท็บ */
-
 /* เมื่อแท็บถูกเลือก */
 .box-tabs .MuiTabs-root .Mui-selected {
   background-color: white; /* กำหนดสีพื้นหลังเมื่อถูกเลือก */
@@ -533,10 +531,6 @@ a {
 
 .css-12zaef5.MuiStepLabel-alternativeLabel {
   margin-top: 0px;
-}
-
-.css-1hds57e {
-  background-color: "none" !important;
 }
 
 .box-status {
