@@ -151,7 +151,6 @@ export default function DialogEditUserProps(props: DialogProps) {
             style={{
               justifyContent: "center",
               display: "flex",
-              marginTop: 20,
             }}
           >
             <Button
