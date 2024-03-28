@@ -56,8 +56,9 @@ a {
   justify-content: center;
   display: flex;
   z-index: 1000;
-  width: 380px;
+  width: 393px;
   margin-bottom: 30px;
+  background-color: #fff;
 }
 .box-search-item {
   display: flex;
@@ -373,7 +374,7 @@ a {
 
 .box-image-product-detail {
   background-color: #f1f1f1;
-  height: 420px;
+  height: 350px;
   width: 100%;
   border-radius: 0px 0px 30px 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -385,13 +386,13 @@ a {
 }
 
 .box-image-product {
-  width: 207px;
+  width: 70%;
   height: 278px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  margin-bottom: 10px;
+
   align-items: center;
   display: flex;
   justify-content: center;
@@ -636,5 +637,4 @@ a {
   width: 100%;
   -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  background-color: #fff;
 }

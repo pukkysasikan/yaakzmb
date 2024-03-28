@@ -1,11 +1,21 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { AddRounded, ArrowBackIosNewRounded } from "@mui/icons-material";
 
 import TapsProps from "@/components/Tabs";
 import router from "next/router";
+import Image from "next/image";
+import mypic from "../assets/imges/1709677279796.jpg";
 
 export default function ProductDetail() {
   return (
@@ -26,8 +36,26 @@ export default function ProductDetail() {
         </div>
         <div className="box-image-product-detail">
           <div className="box-image-product">
-            <img src="" />
-            <Typography>รูปภาพ</Typography>
+            <Card
+              sx={{
+                boxShadow: "none",
+                display: "grid",
+                justifyContent: "center",
+              }}
+            >
+              <CardMedia className="img-detail-reward">
+                <Image
+                  src={mypic}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                  }}
+                />
+              </CardMedia>
+            </Card>
           </div>
         </div>
         <div className="product-detail-container">
