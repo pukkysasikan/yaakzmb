@@ -13,7 +13,7 @@ const ImageSlider: React.FC<ItemSliderProps> = ({ slides }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2.6,
+    slidesToShow: 2.5,
     slidesToScroll: 1,
   };
 
