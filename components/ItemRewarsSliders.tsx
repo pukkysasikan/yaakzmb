@@ -15,7 +15,7 @@ const ItemRewarsSliders: React.FC<ItemRewarsSlidersProps> = ({ slides }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2.6,
+    slidesToShow: 2.5,
     slidesToScroll: 1,
   };
 

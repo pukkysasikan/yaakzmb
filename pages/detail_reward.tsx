@@ -35,14 +35,14 @@ export default function ItemDetailRewards() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="toolbar">
+        <IconButton onClick={() => router.back()}>
+          <ArrowBackIosNewRounded />
+        </IconButton>
+        <Typography style={{ fontSize: 24 }}>รายละเอียดสินค้า</Typography>
+        <div />
+      </div>
       <Box className="container">
-        <div className="toolbar">
-          <IconButton onClick={() => router.back()}>
-            <ArrowBackIosNewRounded />
-          </IconButton>
-          <Typography style={{ fontSize: 24 }}>รายละเอียดสินค้า</Typography>
-          <div />
-        </div>
         <div className="product-index-container">
           <Card
             sx={{

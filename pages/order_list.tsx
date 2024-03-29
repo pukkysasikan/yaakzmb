@@ -147,7 +147,7 @@ export default function OrdeList() {
               <div className="img-item">
                 <Typography>รูปภาพ</Typography>
               </div>
-              <div style={{ width: 230, marginTop: -5 }}>
+              <div style={{ width: 215, marginTop: -5 }}>
                 <Typography style={{ height: 55 }}>
                   ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                 </Typography>
@@ -167,7 +167,7 @@ export default function OrdeList() {
               <div className="img-item">
                 <Typography>รูปภาพ</Typography>
               </div>
-              <div style={{ width: 230, marginTop: -5 }}>
+              <div style={{ width: 215, marginTop: -5 }}>
                 <Typography style={{ height: 55 }}>
                   ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                 </Typography>
@@ -222,7 +222,7 @@ export default function OrdeList() {
                 <div className="img-item">
                   <Typography>รูปภาพ</Typography>
                 </div>
-                <div style={{ width: 230, marginTop: -5 }}>
+                <div style={{ width: 215, marginTop: -5 }}>
                   <Typography style={{ height: 55 }}>
                     ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                   </Typography>
@@ -251,7 +251,7 @@ export default function OrdeList() {
                 <div className="img-item">
                   <Typography>รูปภาพ</Typography>
                 </div>
-                <div style={{ width: 230, marginTop: -5 }}>
+                <div style={{ width: 215, marginTop: -5 }}>
                   <Typography style={{ height: 55 }}>
                     ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                   </Typography>
@@ -311,7 +311,7 @@ export default function OrdeList() {
                 <div className="img-item">
                   <Typography>รูปภาพ</Typography>
                 </div>
-                <div style={{ width: 230, marginTop: -5 }}>
+                <div style={{ width: 215, marginTop: -5 }}>
                   <Typography style={{ height: 55 }}>
                     ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                   </Typography>
@@ -340,7 +340,7 @@ export default function OrdeList() {
                 <div className="img-item">
                   <Typography>รูปภาพ</Typography>
                 </div>
-                <div style={{ width: 230, marginTop: -5 }}>
+                <div style={{ width: 215, marginTop: -5 }}>
                   <Typography style={{ height: 55 }}>
                     ยอดนักสืบจิ๋ว โคนัน ล.5 - วันสบายๆของซีโร่ (90)
                   </Typography>
