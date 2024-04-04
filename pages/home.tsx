@@ -66,8 +66,8 @@ export default function Home() {
         </IconButton>
       </div>
       <Box className="container">
-        <div className="box-search-item">
-          {/* <div className="search-item">
+        {/* <div className="box-search-item">
+          <div className="search-item">
             <Search>
               <SearchIconWrapper>
                 <SearchOutlined />
@@ -80,8 +80,8 @@ export default function Home() {
                 />
               </a>
             </Search>
-          </div> */}
-          {/* <div>
+          </div>
+          <div>
           <Button
             className="btn-add-item"
             variant="contained"
@@ -90,8 +90,8 @@ export default function Home() {
             <AddRounded />
             <MenuBookRounded />
           </Button>
-        </div> */}
         </div>
+        </div> */}
 
         <div className="box-points">
           <div className="box-points-left">
