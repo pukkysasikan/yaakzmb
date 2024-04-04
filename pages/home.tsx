@@ -1,10 +1,22 @@
 import Head from "next/head";
 import * as React from "react";
 
-import { Box, Button, InputBase, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  InputBase,
+  Typography,
+} from "@mui/material";
 import {
   AddRounded,
+  ArrowForwardIosRounded,
   CardGiftcardRounded,
+  CleanHandsRounded,
+  ClearRounded,
   MenuBookRounded,
   SearchOffOutlined,
   SearchOutlined,
@@ -21,6 +33,7 @@ export default function Home() {
   const [searchPlaceholder, setSearchPlaceholder] =
     React.useState("ค้นหาหนังสือ");
 
+  const [openSearch, setOpenSearch] = React.useState(false);
   const slides = [
     {
       title: "Slide 1",
@@ -47,11 +60,14 @@ export default function Home() {
       <div className="toolbar">
         <div />
         <Typography style={{ fontSize: "24px" }}>หน้าแรก</Typography>
-        <div />
+
+        <IconButton onClick={() => setOpenSearch(true)}>
+          <SearchOutlined />
+        </IconButton>
       </div>
       <Box className="container">
         <div className="box-search-item">
-          <div className="search-item">
+          {/* <div className="search-item">
             <Search>
               <SearchIconWrapper>
                 <SearchOutlined />
@@ -64,7 +80,7 @@ export default function Home() {
                 />
               </a>
             </Search>
-          </div>
+          </div> */}
           {/* <div>
           <Button
             className="btn-add-item"
@@ -161,6 +177,64 @@ export default function Home() {
           </div>
         </div>
       </Box>
+      <Dialog
+        open={openSearch}
+        PaperProps={{
+          style: {
+            borderRadius: 20,
+            height: 500,
+            width: "80%",
+          },
+        }}
+      >
+        <DialogTitle
+          style={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <Typography>ค้นหาหนังสือ</Typography>
+          <IconButton
+            style={{ width: 10, height: 10 }}
+            onClick={() => setOpenSearch(false)}
+          >
+            <ClearRounded />
+          </IconButton>
+        </DialogTitle>
+
+        <DialogContent>
+          <div style={{ justifyContent: "center", display: "flex" }}>
+            <div className="search-input">
+              <InputBase
+                placeholder="กรอกชื่อหนังสือ"
+                sx={{ marginLeft: 1, marginTop: 0.5 }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
+            <IconButton onClick={() => setOpenSearch(true)}>
+              <SearchOutlined />
+            </IconButton>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <a href="search_product">
+              <div className="box-search-item3">
+                <Typography style={{ padding: 10, width: 300 }}>
+                  โคนันภาค 1
+                </Typography>
+                <ArrowForwardIosRounded
+                  style={{ width: 16, height: 16, marginTop: 10, padding: 5 }}
+                />
+              </div>
+            </a>
+
+            <div className="box-search-item3">
+              <Typography style={{ padding: 10, width: 300 }}>
+                โคนันภาค 2
+              </Typography>
+              <ArrowForwardIosRounded
+                style={{ width: 16, height: 16, marginTop: 10, padding: 5 }}
+              />
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <TapsProps />
     </>

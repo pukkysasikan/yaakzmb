@@ -31,9 +31,7 @@ export default function Stock() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="toolbar">
-        <IconButton onClick={() => router.back()}>
-          <ArrowBackIosNewRounded />
-        </IconButton>
+        <div></div>
         <Typography style={{ fontSize: 24, marginRight: 20 }}>
           คลังของฉัน
         </Typography>
