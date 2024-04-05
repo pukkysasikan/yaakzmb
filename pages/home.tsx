@@ -176,46 +176,41 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Box>
-      <Dialog
-        open={openSearch}
-        PaperProps={{
-          style: {
-            borderRadius: 20,
-            height: 500,
-            width: "80%",
-          },
-        }}
-      >
-        <DialogTitle
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <Typography>ค้นหาหนังสือ</Typography>
-          <IconButton
-            style={{ width: 10, height: 10 }}
-            onClick={() => setOpenSearch(false)}
-          >
-            <ClearRounded />
-          </IconButton>
-        </DialogTitle>
 
-        <DialogContent>
-          <div style={{ justifyContent: "center", display: "flex" }}>
-            <div className="search-input">
-              <InputBase
-                placeholder="กรอกชื่อหนังสือ"
-                sx={{ marginLeft: 1, marginTop: 0.5 }}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </div>
-            <IconButton onClick={() => setOpenSearch(true)}>
-              <SearchOutlined />
+        <Dialog
+          open={openSearch}
+          PaperProps={{
+            style: { borderRadius: 20, height: 500 },
+          }}
+        >
+          <div
+            style={{
+              justifyContent: "space-between",
+              display: "flex",
+            }}
+          >
+            <DialogTitle>ค้นหาหนังสือ</DialogTitle>
+            <IconButton style={{ margin: 5 }}>
+              <ClearRounded onClick={() => setOpenSearch(false)} />
             </IconButton>
           </div>
-          <div style={{ marginTop: 20 }}>
+
+          <DialogContent>
+            <div style={{ justifyContent: "center", display: "flex" }}>
+              <div className="search-input">
+                <InputBase
+                  placeholder="กรอกชื่อหนังสือ"
+                  sx={{ marginLeft: 1, marginTop: 0.5 }}
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </div>
+              <IconButton onClick={() => setOpenSearch(true)}>
+                <SearchOutlined />
+              </IconButton>
+            </div>
             <a href="search_product">
               <div className="box-search-item3">
-                <Typography style={{ padding: 10, width: 300 }}>
+                <Typography style={{ padding: 10, width: 250 }}>
                   โคนันภาค 1
                 </Typography>
                 <ArrowForwardIosRounded
@@ -223,18 +218,19 @@ export default function Home() {
                 />
               </div>
             </a>
-
-            <div className="box-search-item3">
-              <Typography style={{ padding: 10, width: 300 }}>
-                โคนันภาค 2
-              </Typography>
-              <ArrowForwardIosRounded
-                style={{ width: 16, height: 16, marginTop: 10, padding: 5 }}
-              />
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+            <a href="search_product">
+              <div className="box-search-item3">
+                <Typography style={{ padding: 10, width: 250 }}>
+                  โคนันภาค 1
+                </Typography>
+                <ArrowForwardIosRounded
+                  style={{ width: 16, height: 16, marginTop: 10, padding: 5 }}
+                />
+              </div>
+            </a>
+          </DialogContent>
+        </Dialog>
+      </Box>
 
       <TapsProps />
     </>
