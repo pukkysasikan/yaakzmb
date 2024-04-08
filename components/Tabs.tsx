@@ -53,7 +53,7 @@ export default function TapsProps() {
         />
 
         <Typography sx={{ fontSize: 12, textAlign: "center" }}>
-          คลังของฉัน
+          ชั้นหนังสือ
         </Typography>
       </IconButton>
 

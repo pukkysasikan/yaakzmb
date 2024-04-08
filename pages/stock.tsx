@@ -33,7 +33,7 @@ export default function Stock() {
       <div className="toolbar">
         <div></div>
         <Typography style={{ fontSize: 24, marginRight: 20 }}>
-          คลังของฉัน
+          ชั้นหนังสือ
         </Typography>
         <div />
       </div>
