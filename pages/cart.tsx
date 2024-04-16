@@ -184,7 +184,7 @@ export default function Cart() {
           </div>
           <a href="check_out">
             <div className="bottom-btn">
-              <Button className="btn-login" variant="contained">
+              <Button className="btn-regis" variant="contained">
                 ดำเนินการต่อ
               </Button>
             </div>

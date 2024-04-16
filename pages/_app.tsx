@@ -1,7 +1,14 @@
 import { ThemeProvider, createTheme } from "@mui/material";
 import { AppProps } from "next/app";
+import { Toaster } from "react-hot-toast";
 import Head from "next/head";
 import "../styles/globals.css";
+import dayjs from "dayjs";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const theme = createTheme({
   typography: {
@@ -35,6 +42,7 @@ const theme = createTheme({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Toaster />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

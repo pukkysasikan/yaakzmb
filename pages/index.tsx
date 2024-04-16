@@ -2,12 +2,23 @@ import Head from "next/head";
 import * as React from "react";
 import Image from "next/image";
 import mypic from "../assets/imges/Yaakz_Profile-1000-01_(1)-transformed.png";
-import { Box, Button, InputBase, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  IconButton,
+  InputAdornment,
+  InputBase,
+  TextField,
+  Typography,
+} from "@mui/material";
 import {
   AddRounded,
   ErrorOutlineRounded,
   Search,
   SearchOutlined,
+  Visibility,
+  VisibilityOff,
 } from "@mui/icons-material";
 import { SearchIconWrapper } from "@/services/StyleUtils";
 import DialogProps from "@/components/dialog/DialogSuccess";
@@ -15,6 +26,15 @@ import DialogProps from "@/components/dialog/DialogSuccess";
 export default function Index() {
   const [openDialog, setOpenDialog] = React.useState(false);
 
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleMouseDownPassword = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+  };
   const handleClose = () => {
     setOpenDialog(false);
   };
@@ -34,8 +54,28 @@ export default function Index() {
           </div>
           <Typography style={{ textAlign: "center" }}>YAAKZ MEMBER</Typography>
           <Typography style={{ textAlign: "center", marginTop: 20 }}>
-            กรอกเบอร์โทรศัพท์เพื่อลงทะเบียน
+            เข้าสู่ระบบ
           </Typography>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 20,
+            }}
+          >
+            <div className="input">
+              <InputBase
+                placeholder="อีเมล์"
+                sx={{
+                  marginLeft: 3,
+                  marginTop: 0.5,
+                  width: "100%",
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
+          </div>
 
           <div
             style={{
@@ -46,31 +86,56 @@ export default function Index() {
           >
             <div className="input">
               <InputBase
-                placeholder="เบอร์โทรศัพท์"
-                onClick={() => setOpenDialog(true)}
+                placeholder="รหัสผ่าน"
+                type={showPassword ? "text" : "password"}
                 sx={{
-                  marginLeft: 3,
-                  marginTop: 0.5,
                   width: "100%",
+                  marginLeft: 3,
                 }}
-                inputProps={{ "aria-label": "search" }}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
               />
             </div>
           </div>
-          <a href="register">
-            <div
-              style={{
-                justifyContent: "center",
-                display: "flex",
-                marginTop: 20,
-              }}
-            >
-              <Button className="btn-login" variant="contained">
-                ดำเนินการต่อ
-              </Button>
-            </div>
-          </a>
+
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              marginTop: 20,
+            }}
+          >
+            <Button href="home" className="btn-login" variant="contained">
+              เข้าสู่ระบบ
+            </Button>
+          </div>
+          <Divider
+            style={{
+              marginTop: 20,
+            }}
+          />
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              marginTop: 20,
+            }}
+          >
+            <Button href="register" className="btn-login" variant="contained">
+              ลงทะเบียน
+            </Button>
+          </div>
         </div>
+
         <DialogProps
           open={openDialog}
           onClose={handleClose}

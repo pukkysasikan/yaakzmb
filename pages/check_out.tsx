@@ -171,7 +171,7 @@ export default function Cart() {
           <a href="order_list">
             <div className="bottom-btn">
               <Button
-                className="btn-login"
+                className="btn-regis"
                 variant="contained"
                 onClick={() => setOpenSuccess(true)}
               >
