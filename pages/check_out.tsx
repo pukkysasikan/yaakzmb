@@ -13,14 +13,82 @@ import TapsProps from "@/components/Tabs";
 import DialogProps from "@/components/dialog/DialogSuccess";
 import router from "next/router";
 import DialogEditUserProps from "@/components/dialog/DialogEditUser";
+import { customer_update_seed } from "@/models/seed";
+import { AddressOption } from "@/services/StoreUtils";
+import { api } from "@/services/AxiosUtils";
+import toast from "react-hot-toast";
+import dayjs, { locale } from "dayjs";
+import { thaiAddress } from "@/models/constants/thaiAddress";
 
 export default function Cart() {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openEditUser, setOpenEditUser] = React.useState(false);
+  const [selectedCustomer, setSelectedCustomer] =
+    React.useState<EditUser>(customer_update_seed);
+  const [address, setAddress] = React.useState<AddressOption[]>([]);
+  const [openUpdateCustomer, setOpenUpdateCustomer] = React.useState(false);
   const handleClose = () => {
     setOpenSuccess(false);
     setOpenEditUser(false);
   };
+  const handleChangeEdit = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setSelectedCustomer((prevState: any) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  // [Method] - ดึงข้อมูลที่อยู่
+  const getAddress = async () => {
+    setAddress(thaiAddress);
+  };
+
+  const getCustomer = async () => {
+    const res = await api.get(`/customer/list?uid=1051`);
+    setSelectedCustomer(res.data.item[0]);
+  };
+
+  const onOpenUpdateCustomer = async () => {
+    const res = await api.get(`/customer/info/${1051}`);
+
+    if (res.data.status === "Success") {
+      console.log(res.data);
+      setSelectedCustomer((prev) => ({
+        ...prev,
+        province: String(res.data.data[0].province),
+        district: String(res.data.data[0].district),
+        sub_district: res.data.data[0].sub_district,
+        zip_code: res.data.data[0].zip_code,
+        birth_day: res.data.data[0].birth_day,
+        address: res.data.data[0].address,
+      }));
+    }
+
+    setOpenUpdateCustomer(true);
+  };
+
+  //[Mathod] - บันทึกการแก้ไขข้อมูลลูกค้า
+  const onSubmitUpdateCustomer = async () => {
+    setOpenUpdateCustomer(false);
+    delete selectedCustomer.birth_day;
+
+    const res = await api.put(
+      `/customer/update/${selectedCustomer.id}`,
+      selectedCustomer
+    );
+    if (res.data.status === "Success") {
+      toast.success(res.data.msg);
+    } else {
+      toast.error(res.data.msg);
+    }
+    console.log(res.data.msg);
+  };
+
+  React.useEffect(() => {
+    getCustomer();
+    getAddress();
+  }, []);
 
   return (
     <>
@@ -190,7 +258,43 @@ export default function Cart() {
             />
           }
         />
-        <DialogEditUserProps open={openEditUser} onClose={handleClose} />
+        <DialogEditUserProps
+          open={openUpdateCustomer}
+          onClose={handleClose}
+          customer_name={selectedCustomer.name}
+          customer_phone={selectedCustomer.phone}
+          customer_email={selectedCustomer.email}
+          customer_address={selectedCustomer.address}
+          customer_main_address={[
+            selectedCustomer.province,
+            selectedCustomer.district,
+            `${selectedCustomer.sub_district} ${selectedCustomer.zip_code}`,
+          ]}
+          onChangeCustomerData={handleChangeEdit}
+          locale={locale}
+          customer_birth_day={selectedCustomer.birth_day}
+          onChangeProvince={(e) =>
+            setSelectedCustomer({ ...selectedCustomer, province: Number(e) })
+          }
+          onChangeDistrict={(e) =>
+            setSelectedCustomer({ ...selectedCustomer, district: e })
+          }
+          onChangeSubDistrictAndPostCode={(e, a) =>
+            setSelectedCustomer({
+              ...selectedCustomer,
+              sub_district: e,
+              zip_code: a,
+            })
+          }
+          cascaderAddress={address}
+          onChangeDate={(value: any) => {
+            setSelectedCustomer({
+              ...selectedCustomer,
+              bod: !value ? null : dayjs(value).format("YYYY-MM-DD"),
+            });
+          }}
+          onSubmit={onSubmitUpdateCustomer}
+        />
       </Box>
     </>
   );
